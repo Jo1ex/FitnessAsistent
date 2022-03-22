@@ -117,9 +117,12 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Domov</router-link> |
-      <router-link to="/onas">O nas</router-link> |
-      <router-link to="/urnik">Urnik</router-link>
+      <template>
+        <v-router-link>
+          <router-link to="/domov">DOMOV</router-link> |
+          <router-link to="/upora">UPORABNIK</router-link>
+        </v-router-link>
+      </template>
     </nav>
     <router-view/>
   </div>
