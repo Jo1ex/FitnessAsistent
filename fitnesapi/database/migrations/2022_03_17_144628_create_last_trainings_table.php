@@ -17,10 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('last_trainings');
-            $table->foreign('user_id')
-            ->on('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+            $table->bigInteger("user_id")->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
