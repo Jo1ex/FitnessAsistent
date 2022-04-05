@@ -40,11 +40,14 @@ const routes = [
     name: 'vnospodatkov',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/VnospodatkovView.vue')
   },
+<<<<<<< HEAD
   {
     path: '/objave',
     name: 'objave',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/DomovView.vue')
   },
+=======
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
 ]
 
 const router = new VueRouter({

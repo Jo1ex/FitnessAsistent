@@ -1,11 +1,18 @@
 <template>
   
   <v-app id="inspire">
+<<<<<<< HEAD
     
       
       <div :style="image" class="image">
     <v-container class="fill-height" fluid>
       
+=======
+    <section>
+      <div :style="image" class="image">
+    
+      <v-container class="fill-height" fluid>
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
         <v-row align="center" justify="center" font="Poppins">
           <v-col cols="12" sm="8" md="8">
             
@@ -18,6 +25,7 @@
                         >Dobrodosli!</h1>
                       
                         <h4 class="text-center mt-4">Vpisite svoj email za prijavo</h4>
+<<<<<<< HEAD
                         <v-form v-model="valid">
                           <v-text-field
                             v-model="email"
@@ -28,18 +36,32 @@
                             rules="emailRules"
                             color="teal accent-2"
                             required
+=======
+                        <v-form>
+                          <v-text-field
+                            label="Email naslov*"
+                            name="Email"
+                            prepend-icon="mdi-mail"
+                            type="text"
+                            color="teal accent-2"
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
                           />
                   
                           <v-text-field
                             v-model="geslo"
                             id="Geslo"
-                            label="Geslo"
+                            label="Geslo*"
                             name="Geslo"
                             prepend-icon="mdi-key"
+<<<<<<< HEAD
                             counter="30"
                             rules="passwordRules"
                             color="teal accent-2"
                             required
+=======
+                            type="Geslo"
+                            color="teal accent-2"
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
                           />
                         </v-form>
                         
@@ -64,13 +86,18 @@
         
       </v-container>
       </div>
+<<<<<<< HEAD
     
+=======
+    </section>
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
   </v-app>
   
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
   data: () => ({
     step: 1
   }),
@@ -96,3 +123,17 @@ export default {
     }),
   }
 </script>
+=======
+        data() {
+            return {
+                image: {backgroundImage: "url(file:///C:/Users/Jolex/Documents/FitnessAsistent/FitnessAsistent/fitnesweb/slike/slika.png)"}
+            };
+        }
+    };
+</script>
+<style>
+    .image {
+        background-repeat: repeat;
+    }
+</style>
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0

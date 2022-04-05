@@ -49,6 +49,7 @@
                             prepend-icon="mdi-key"
                             type="Geslo"
                             color="teal accent-2"
+<<<<<<< HEAD
                           >
                           <div class="control">
                               <button class="button" @click="toggleShow"><span class="icon is-small is-right">
@@ -57,6 +58,9 @@
                           </button>
                           </div>
                           </v-text-field>
+=======
+                          />
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
                           <v-text-field
                             id="Geslo"
                             label="Potrdi geslo*"

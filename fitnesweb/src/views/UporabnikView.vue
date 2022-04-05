@@ -1,7 +1,57 @@
 <template>
   <v-app id="/reg">
     
+<<<<<<< HEAD
       heloo world
+=======
+      <v-container class="fill-height" fluid>
+        <v-row align="center" justify="center">
+          <v-col cols="12" sm="8" md="8">
+            
+              <v-window v-model="step" align="center" justify="">
+                <v-window-item :value="1">
+                    <v-col cols="12" md="8">
+                      <v-card-text class="mt-12">
+                        <h1
+                          color=#00A99D class="text-center display-2 teal--text text--accent-3"
+                        >Dobrodosli!</h1>
+                        
+                        <h4 class="text-center mt-4">Vpisite svoj email za prijavo</h4>
+                        <v-form>
+                          <v-text-field
+                            label="Email naslov*"
+                            name="Email"
+                            prepend-icon="e"
+                            type="text"
+                            color="teal accent-2"
+                          />
+
+                          <v-text-field
+                            id="gagagag"
+                            label="gagagag*"
+                            name="ide gasssss"
+                            prepend-icon="g"
+                            type="Geslo"
+                            color="teal accent-2"
+                          />
+                        </v-form>
+                        <v-btn text x-small>Ali ste pozabili geslo?</v-btn>
+                        
+                        <router-link to="/reg">Registracija</router-link>
+                      </v-card-text>
+                      <div class="text-center mt-3">
+                        <v-btn color="#00A99D" elevation="5" outlined x-large bold >Prijavi se</v-btn>
+                      </div>
+                    </v-col>
+                    
+                </v-window-item>
+                
+              </v-window>
+            
+          </v-col>
+        </v-row>
+      </v-container>
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
     
   </v-app>
 </template>

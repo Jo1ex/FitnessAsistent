@@ -13,6 +13,7 @@
                           color=#00A99D class="text-center display-2 teal--text text--accent-3"
                         >Gremo dokoncati tvoj racun!</h4>
                         
+<<<<<<< HEAD
                         <h4 class="text-center mt-15">S vpisovanjem teh podatkov nam boš pomagal izbrati najboljše vaje za tebe. </h4>
                         
                         
@@ -36,6 +37,46 @@
                               
                             </v-date-picker>
                           </v-row>
+=======
+                        <h4 class="text-center mt-4">S vpisovanjem teh podatkov nam boš pomagal izbrati najboljše vaje za tebe. </h4>
+                        
+                        
+                          <div class="text-center mt-9">
+                            
+                             <v-menu
+                                transition="slide-y-transition"
+                                bottom
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <v-btn
+                                    class="white"
+                                    color="white"
+                                    light
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                  Izberi spol
+                                  </v-btn>
+                                </template>
+                                <v-list>
+                                  <v-list-item
+                                    v-for="(item, i) in items"
+                                    :key="i"
+                                  >
+                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                  </v-list-item>
+                                </v-list>
+                              </v-menu>
+                            </div>
+                          <v-form>
+                          <v-text-field
+                            label="Datum rojstva*"
+                            name="datum rojstva"
+                            prepend-icon="mdi-calendar-month"
+                            type="text"
+                            color="teal accent-2"
+                          />
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
                           <v-text-field
                             label="Teza*"
                             name="Teza"
@@ -44,6 +85,10 @@
                             color="teal accent-2"
                           />
 
+<<<<<<< HEAD
+=======
+                          
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
                           <v-text-field
                             label="Visina*"
                             name="Visina"
@@ -85,7 +130,14 @@ export default {
 <script>
   export default {
     data: () => ({
+<<<<<<< HEAD
       items: ['Zenski', 'Moski'],
+=======
+      items: [
+        { title: 'Zenski' },
+        { title: 'Moski' },
+      ],
+>>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
     }),
   }
 </script>
