@@ -38,6 +38,42 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ChatController;
+
+use App\Http\Controllers\CommentController;
+
+use App\Http\Controllers\Exercise_progresController;
+
+use App\Http\Controllers\Exercise_scheduleController;
+
+use App\Http\Controllers\ExerciseController;
+
+use App\Http\Controllers\FoodController;
+
+use App\Http\Controllers\FriendController;
+
+use App\Http\Controllers\Heart_beatController;
+
+use App\Http\Controllers\Last_trainingsController;
+
+use App\Http\Controllers\LikeController;
+
+use App\Http\Controllers\Meal_scheduleController;
+
+use App\Http\Controllers\PostController;
+
+use App\Http\Controllers\StepsController;
+
+use App\Http\Controllers\Todays_dietController;
+
+use App\Http\Controllers\Trainings_planningController;
+
+use App\Http\Controllers\User_imagesController;
+
+use App\Http\Controllers\Water_consumedController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -60,23 +96,10 @@ route::get('/post', function() {
  
 });
 
-
-route::get('/chat', function() {
-
-    return Chat::all();
-
-
-    
-
-});
-
-
 route::get('/comment', function() {
 
     return Comment::all();
 
-
-    
 
 });
 
@@ -229,5 +252,39 @@ Route::post('/post', function() {
 
         'caption' => request('caption'),
 
-    ]);
-});
+]);
+Route::get('/chat', [ChatController::class, 'index']);
+
+Route::get('/comments', [CommentController::class, 'index']);
+
+Route::get('/exercise_progress', [Exercise_progresController::class, 'index']);
+
+Route::get('/exercise_schedules', [Exercise_scheduleController::class, 'index']);
+
+Route::get('/exercises', [ExercisesController::class, 'index']);
+
+Route::get('/foods', [FoodController::class, 'index']);
+
+Route::get('/friends', [FriendController::class, 'index']);
+
+Route::get('/heart_beats', [Heart_beatController::class, 'index']);
+
+Route::get('/last_trainings', [Last_trainingsController::class, 'index']);
+
+Route::get('/likes', [LikeController::class, 'index']);
+
+Route::get('/meal_schedules', [Meal_scheduleController::class, 'index']);
+
+Route::get('/posts', [PostController::class, 'index']);
+
+Route::get('/steps', [StepsController::class, 'index']);
+
+Route::get('/todays_diets', [Todays_dietController::class, 'index']);
+
+Route::get('/trainings_plannings', [Trainings_planningController::class, 'index']);
+
+Route::get('/user_images', [User_imagesController::class, 'index']);
+
+Route::get('/users', [UserController::class, 'index']);
+
+Route::get('/water_consumed', [Water_consumedController::class, 'index']);

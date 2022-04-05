@@ -3,22 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Chat;
 
 class ChatController extends Controller
 {
     public function index() {
-        $chat = [
-            ['type' =>]
-            ['type' =>]
-            ['type' =>]
-        ];
-        
-        return view('chat'), [
-            'chat' => $chat,
-        ]);
+        return Chat::all();
     }
-
-public function show($id) {
-    return view('details',['id' => $id]);
-}
+    
 }
