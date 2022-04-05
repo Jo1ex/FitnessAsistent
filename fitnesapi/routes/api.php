@@ -1,38 +1,38 @@
 <?php
 
-use App\Models\post;
+use App\Models\Post;
 
-use App\Models\chat;
+use App\Models\Chat;
 
-use App\Models\comment;
+use App\Models\Comment;
 
-use App\Models\exercise_progres;
+use App\Models\Exercise_progres;
 
-use App\Models\exercises;
+use App\Models\Exercises;
 
-use App\Models\food;
+use App\Models\Food;
 
-use App\Models\friend;
+use App\Models\Friend;
 
-use App\Models\heart_beat;
+use App\Models\Heart_beat;
 
-use App\Models\last_trainings;
+use App\Models\Last_trainings;
 
-use App\Models\exercise_schedule;
+use App\Models\Exercise_schedule;
 
-use App\Models\like;
+use App\Models\Like;
 
-use App\Models\meal_schedule;
+use App\Models\Meal_schedule;
 
-use App\Models\steps;
+use App\Models\Steps;
 
-use App\Models\todays_diet;
+use App\Models\Todays_diet;
 
-use App\Models\trainings_planning;
+use App\Models\Trainings_planning;
 
-use App\Models\user_images;
+use App\Models\User_images;
 
-use App\Models\water_consumed;
+use App\Models\Water_consumed;
 
 use Illuminate\Http\Request;
 
@@ -81,7 +81,7 @@ route::get('/comment', function() {
 });
 
 
-route::get('/exercise_progres', function() {
+route::get('/exercise-progres', function() {
 
     return Exercise_progres::all();
 
@@ -121,7 +121,7 @@ route::get('/friend', function() {
 });
 
 
-route::get('/heart_beat', function() {
+route::get('/heart-beat', function() {
 
     return Heart_beat::all();
 
@@ -131,7 +131,7 @@ route::get('/heart_beat', function() {
 });
 
 
-route::get('/last_trainings', function() {
+route::get('/last-trainings', function() {
 
     return Last_trainings::all();
 
@@ -141,7 +141,7 @@ route::get('/last_trainings', function() {
 });
 
 
-route::get('/exercise_schedule', function() {
+route::get('/exercise-schedule', function() {
 
     return Exercise_schedule::all();
 
@@ -161,7 +161,7 @@ route::get('/like', function() {
 });
 
 
-route::get('/meal_schedule', function() {
+route::get('/meal-schedule', function() {
 
     return Meal_schedule::all();
 
@@ -181,7 +181,7 @@ route::get('/steps', function() {
 });
 
 
-route::get('/todays_diet', function() {
+route::get('/todays-diet', function() {
 
     return Todays_diet::all();
 
@@ -191,7 +191,7 @@ route::get('/todays_diet', function() {
 });
 
 
-route::get('trainings_planning', function() {
+route::get('trainings-planning', function() {
 
     return Trainings_planning::all();
 
@@ -201,7 +201,7 @@ route::get('trainings_planning', function() {
 });
 
 
-route::get('user_images', function() {
+route::get('user-images', function() {
 
     return User_images::all();
 
@@ -211,7 +211,7 @@ route::get('user_images', function() {
 });
 
 
-route::get('water_consumed', function() {
+route::get('water-consumed', function() {
 
     return Water_consumed::all();
 
