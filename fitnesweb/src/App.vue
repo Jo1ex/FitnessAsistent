@@ -1,15 +1,11 @@
 <template>
   
   <div>
+    
       <v-app-bar
         elevation="4"
         color='#2C6763'
         >
-          <v-img
-          max-height="300"
-          max-width="238"
-          src="C:\Users\Jolex\Pictures\Screenshots\Screenshot 2022-02-25 084057.PNG"
-        ></v-img>
         
           <v-row align="left" light>
             <h1>FITNESASISTENT</h1>
@@ -22,7 +18,7 @@
         
         
       </v-app-bar>
-      
+    
     <router-view />
   </div>
 </template>
@@ -37,8 +33,12 @@
   text-align: right;
   background: #2C6763;
   color: white;
+  
 }
-
+.container{
+  background-image: url('../slike/slika.png');
+  background-size: cover;
+}
 nav {
   padding: 25px;
   

@@ -1,9 +1,11 @@
 <template>
+  
   <v-app id="inspire">
-    <section>
-      <div :style="image" class="image">
     
-      <v-container class="fill-height" fluid>
+      
+      <div :style="image" class="image">
+    <v-container class="fill-height" fluid>
+      
         <v-row align="center" justify="center" font="Poppins">
           <v-col cols="12" sm="8" md="8">
             
@@ -16,22 +18,28 @@
                         >Dobrodosli!</h1>
                       
                         <h4 class="text-center mt-4">Vpisite svoj email za prijavo</h4>
-                        <v-form>
+                        <v-form v-model="valid">
                           <v-text-field
-                            label="Email naslov*"
+                            v-model="email"
+                            label="Email naslov"
                             name="Email"
                             prepend-icon="mdi-mail"
                             type="text"
+                            rules="emailRules"
                             color="teal accent-2"
+                            required
                           />
                   
                           <v-text-field
+                            v-model="geslo"
                             id="Geslo"
-                            label="Geslo*"
+                            label="Geslo"
                             name="Geslo"
                             prepend-icon="mdi-key"
-                            type="Geslo"
+                            counter="30"
+                            rules="passwordRules"
                             color="teal accent-2"
+                            required
                           />
                         </v-form>
                         
@@ -53,23 +61,38 @@
             </div>
           </v-col>
         </v-row>
+        
       </v-container>
       </div>
-    </section>
+    
   </v-app>
+  
 </template>
 
 <script>
 export default {
-        data() {
-            return {
-                image: {backgroundImage: "url(file:///C:/Users/Jolex/Documents/FitnessAsistent/FitnessAsistent/fitnesweb/slike/slika.png)"}
-            };
-        }
-    };
+  data: () => ({
+    step: 1
+  }),
+  props: {
+    source: String
+  }
+};
 </script>
-<style>
-    .image {
-        background-repeat: repeat;
-    }
-</style>
+<script>
+  export default {
+    data: () => ({
+      valid: false,
+      geslo: '',
+      gesloRules: [
+        v => !!v || 'Geslo je potrebno',
+        v => v.length <= 30 || 'Geslo more biti pod 30 znakov',
+      ],
+      email: '',
+      emailRules: [
+        v => !!v || 'E-mail je potreben',
+        v => /.+@.+/.test(v) || 'E-mail mora biti veljaven',
+      ],
+    }),
+  }
+</script>

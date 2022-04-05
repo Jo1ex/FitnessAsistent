@@ -18,7 +18,7 @@
                         
                           
                         <v-form>
-                          <v-container fluid>
+                          
                             <v-row align="center">
                               
                                 <v-select
@@ -30,14 +30,12 @@
 
                             </v-row>
                         
-                        </v-container>
-                          <v-text-field
-                            label="Datum rojstva*"
-                            name="datum rojstva"
-                            prepend-icon="mdi-calendar-month"
-                            type="text"
-                            color="teal accent-2"
-                          />
+                        
+                          <v-row justify="center">
+                            <v-date-picker v-model="picker">
+                              
+                            </v-date-picker>
+                          </v-row>
                           <v-text-field
                             label="Teza*"
                             name="Teza"

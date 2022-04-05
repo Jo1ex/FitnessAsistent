@@ -29,6 +29,7 @@
                             name="Novo geslo"
                             prepend-icon="mdi-key"
                             type="Geslo"
+                            counter="30"
                             color="teal accent-2"
                           />
 
@@ -38,6 +39,7 @@
                             name="Potrditev gesla"
                             prepend-icon="mdi-key"
                             type="Geslo"
+                            counter="30"
                             color="teal accent-2"
                           />
                         </v-form>
