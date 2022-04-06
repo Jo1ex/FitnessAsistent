@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Water_consumed;
 
-class UserController extends Controller
+class WaterConsumedController extends Controller
 {
     public function index() {
-        return User::all();
+        return WaterConsumed::all();
     }
     /**
      * Show the profile for a given user.
@@ -17,7 +18,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::findOrFail($id);
+        return WaterConsumed::findOrFail($id);
 
     }
 }
