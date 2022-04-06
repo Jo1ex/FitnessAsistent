@@ -29,10 +29,7 @@
                             name="Novo geslo"
                             prepend-icon="mdi-key"
                             type="Geslo"
-<<<<<<< HEAD
                             counter="30"
-=======
->>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
                             color="teal accent-2"
                           />
 
@@ -42,10 +39,7 @@
                             name="Potrditev gesla"
                             prepend-icon="mdi-key"
                             type="Geslo"
-<<<<<<< HEAD
                             counter="30"
-=======
->>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
                             color="teal accent-2"
                           />
                         </v-form>
