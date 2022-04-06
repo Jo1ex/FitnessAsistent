@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Exercise_progres;
 
-class UserController extends Controller
+
+class ExerciseProgresController extends Controller
 {
     public function index() {
-        return User::all();
+        return ExerciseProgres::all();
     }
     /**
      * Show the profile for a given user.
@@ -17,7 +19,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::findOrFail($id);
+        return ExerciseProgres::findOrFail($id);
 
     }
 }

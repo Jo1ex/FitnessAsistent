@@ -38,39 +38,40 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Route;
 
+
 use App\Http\Controllers\ChatController;
 
 use App\Http\Controllers\CommentController;
 
-use App\Http\Controllers\Exercise_progresController;
+use App\Http\Controllers\ExerciseProgresController;
 
-use App\Http\Controllers\Exercise_scheduleController;
+use App\Http\Controllers\ExerciseScheduleController;
 
-use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\ExercisesController;
 
 use App\Http\Controllers\FoodController;
 
 use App\Http\Controllers\FriendController;
 
-use App\Http\Controllers\Heart_beatController;
+use App\Http\Controllers\HeartBeatController;
 
-use App\Http\Controllers\Last_trainingsController;
+use App\Http\Controllers\LastTrainingsController;
 
 use App\Http\Controllers\LikeController;
 
-use App\Http\Controllers\Meal_scheduleController;
+use App\Http\Controllers\MealScheduleController;
 
 use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\StepsController;
 
-use App\Http\Controllers\Todays_dietController;
+use App\Http\Controllers\TodaysDietController;
 
-use App\Http\Controllers\Trainings_planningController;
+use App\Http\Controllers\TrainingsPlanningController;
 
-use App\Http\Controllers\User_imagesController;
+use App\Http\Controllers\UserImagesController;
 
-use App\Http\Controllers\Water_consumedController;
+use App\Http\Controllers\WaterConsumedController;
 
 
 
@@ -89,170 +90,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-route::get('/post', function() {
 
-    return Post::all();
 
- 
-});
-
-route::get('/comment', function() {
-
-    return Comment::all();
-
-
-});
-
-
-route::get('/exercise-progres', function() {
-
-    return Exercise_progres::all();
-
-
-    
-
-});
-
-
-route::get('/exercises', function() {
-
-    return Exercises::all();
-
-
-    
-
-});
-
-
-route::get('/food', function() {
-
-    return Food::all();
-
-
-    
-
-});
-
-
-route::get('/friend', function() {
-
-    return Friend::all();
-
-
-    
-
-});
-
-
-route::get('/heart-beat', function() {
-
-    return Heart_beat::all();
-
-
-    
-
-});
-
-
-route::get('/last-trainings', function() {
-
-    return Last_trainings::all();
-
-
-    
-
-});
-
-
-route::get('/exercise-schedule', function() {
-
-    return Exercise_schedule::all();
-
-
-    
-
-});
-
-
-route::get('/like', function() {
-
-    return Like::all();
-
-
-    
-
-});
-
-
-route::get('/meal-schedule', function() {
-
-    return Meal_schedule::all();
-
-
-    
-
-});
-
-
-route::get('/steps', function() {
-
-    return Steps::all();
-
-
-    
-
-});
-
-
-route::get('/todays-diet', function() {
-
-    return Todays_diet::all();
-
-
-    
-
-});
-
-
-route::get('trainings-planning', function() {
-
-    return Trainings_planning::all();
-
-
-    
-
-});
-
-
-route::get('user-images', function() {
-
-    return User_images::all();
-
-
-    
-
-});
-
-
-route::get('water-consumed', function() {
-
-    return Water_consumed::all();
-
-
-    
-
-});
-
-
-Route::post('/post', function() {
-
-    return Post::create([
-
-        'post' => request('post'),
-
-        'caption' => request('caption'),
-
-]);
 Route::get('/chat', [ChatController::class, 'index']);
 
 Route::get('/comments', [CommentController::class, 'index']);
@@ -288,3 +127,42 @@ Route::get('/user_images', [User_imagesController::class, 'index']);
 Route::get('/users', [UserController::class, 'index']);
 
 Route::get('/water_consumed', [Water_consumedController::class, 'index']);
+
+
+
+
+Route::get('/chat/{id}', [ChatController::class, 'show']);
+
+Route::get('/comment/{id}', [CommentController::class, 'show']);
+
+Route::get('/exercise-progres/{id}', [ExerciseProgresController::class, 'show']);
+
+Route::get('/exercise-schedule/{id}', [ExerciseScheduleController::class, 'show']);
+
+Route::get('/exercises/{id}', [ExercisesController::class, 'show']);
+
+Route::get('/food/{id}', [FoodController::class, 'show']);
+
+Route::get('/friend/{id}', [FriendController::class, 'show']);
+
+Route::get('/heart-beat/{id}', [HeartBeatController::class, 'show']);
+
+Route::get('/last-trainings/{id}', [LastTrainingsController::class, 'show']);
+
+Route::get('/like/{id}', [LikeController::class, 'show']);
+
+Route::get('/meal-schedule/{id}', [MealScheduleController::class, 'show']);
+
+Route::get('/post/{id}', [PostController::class, 'show']);
+
+Route::get('/steps/{id}', [StepsController::class, 'show']);
+
+Route::get('/todays-diet/{id}', [TodaysDietController::class, 'show']);
+
+Route::get('/training-planing/{id}', [TrainingsPlanningController::class, 'show']);
+
+Route::get('/user-images/{id}', [UserImagesController::class, 'show']);
+
+Route::get('/user/{id}', [UserController::class, 'show']);
+
+Route::get('/water-consumed/{id}', [WaterConsumedController::class, 'show']);

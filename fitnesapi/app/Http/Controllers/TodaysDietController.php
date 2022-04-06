@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Todays_diet;
 
-class UserController extends Controller
+class TodaysDietController extends Controller
 {
     public function index() {
-        return User::all();
+        return TodaysDiet::all();
     }
     /**
      * Show the profile for a given user.
@@ -17,7 +18,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::findOrFail($id);
+        return TodaysDiet::findOrFail($id);
 
     }
 }

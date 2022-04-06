@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Last_trainings;
 
-class UserController extends Controller
+class LastTrainingsController extends Controller
 {
     public function index() {
-        return User::all();
+        return LastTrainings::all();
     }
     /**
      * Show the profile for a given user.
@@ -17,7 +18,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::findOrFail($id);
+        return LastTrainings::findOrFail($id);
 
     }
 }
