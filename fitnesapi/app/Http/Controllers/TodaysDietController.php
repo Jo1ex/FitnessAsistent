@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Todays_diet;
+use App\Models\TodaysDiet;
 
 class TodaysDietController extends Controller
 {

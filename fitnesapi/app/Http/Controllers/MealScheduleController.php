@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Meal_schedule;
+use App\Models\MealSchedule;
 
 class MealScheduleController extends Controller
 {

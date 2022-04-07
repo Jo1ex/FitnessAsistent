@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Last_trainings;
+use App\Models\LastTrainings;
 
 class LastTrainingsController extends Controller
 {

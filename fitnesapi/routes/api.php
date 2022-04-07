@@ -6,7 +6,7 @@ use App\Models\Chat;
 
 use App\Models\Comment;
 
-use App\Models\Exercise_progres;
+use App\Models\ExerciseProgres;
 
 use App\Models\Exercises;
 
@@ -14,25 +14,25 @@ use App\Models\Food;
 
 use App\Models\Friend;
 
-use App\Models\Heart_beat;
+use App\Models\HeartBeat;
 
-use App\Models\Last_trainings;
+use App\Models\LastTrainings;
 
-use App\Models\Exercise_schedule;
+use App\Models\ExerciseSchedule;
 
 use App\Models\Like;
 
-use App\Models\Meal_schedule;
+use App\Models\MealSchedule;
 
 use App\Models\Steps;
 
-use App\Models\Todays_diet;
+use App\Models\TodaysDiet;
 
-use App\Models\Trainings_planning;
+use App\Models\TrainingsPlanning;
 
-use App\Models\User_images;
+use App\Models\UserImages;
 
-use App\Models\Water_consumed;
+use App\Models\WaterConsumed;
 
 use Illuminate\Http\Request;
 
@@ -73,6 +73,8 @@ use App\Http\Controllers\UserImagesController;
 
 use App\Http\Controllers\WaterConsumedController;
 
+use App\Http\Controllers\UserController;
+
 
 
 /*
@@ -92,13 +94,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::get('/chat', [ChatController::class, 'index']);
+Route::get('/chats', [ChatController::class, 'index']);
 
 Route::get('/comments', [CommentController::class, 'index']);
 
-Route::get('/exercise_progress', [Exercise_progresController::class, 'index']);
+Route::get('/exercise_progress', [ExerciseProgresController::class, 'index']);
 
-Route::get('/exercise_schedules', [Exercise_scheduleController::class, 'index']);
+Route::get('/exercise_schedules', [ExerciseScheduleController::class, 'index']);
 
 Route::get('/exercises', [ExercisesController::class, 'index']);
 
@@ -106,63 +108,63 @@ Route::get('/foods', [FoodController::class, 'index']);
 
 Route::get('/friends', [FriendController::class, 'index']);
 
-Route::get('/heart_beats', [Heart_beatController::class, 'index']);
+Route::get('/heart_beats', [HeartBeatController::class, 'index']);
 
-Route::get('/last_trainings', [Last_trainingsController::class, 'index']);
+Route::get('/last_trainings', [LastTrainingsController::class, 'index']);
 
 Route::get('/likes', [LikeController::class, 'index']);
 
-Route::get('/meal_schedules', [Meal_scheduleController::class, 'index']);
+Route::get('/meal_schedules', [MealScheduleController::class, 'index']);
 
 Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('/steps', [StepsController::class, 'index']);
 
-Route::get('/todays_diets', [Todays_dietController::class, 'index']);
+Route::get('/todays_diets', [TodaysDietController::class, 'index']);
 
-Route::get('/trainings_plannings', [Trainings_planningController::class, 'index']);
+Route::get('/training_plannings', [TrainingsPlanningController::class, 'index']);
 
-Route::get('/user_images', [User_imagesController::class, 'index']);
+Route::get('/user_images', [UserImagesController::class, 'index']);
 
 Route::get('/users', [UserController::class, 'index']);
 
-Route::get('/water_consumed', [Water_consumedController::class, 'index']);
+Route::get('/water_consumeds', [WaterConsumedController::class, 'index']);
 
 
 
 
-Route::get('/chat/{id}', [ChatController::class, 'show']);
+Route::get('/chats/{id}', [ChatController::class, 'show']);
 
-Route::get('/comment/{id}', [CommentController::class, 'show']);
+Route::get('/comments/{id}', [CommentController::class, 'show']);
 
-Route::get('/exercise-progres/{id}', [ExerciseProgresController::class, 'show']);
+Route::get('/exercise_progress/{id}', [ExerciseProgresController::class, 'show']);
 
-Route::get('/exercise-schedule/{id}', [ExerciseScheduleController::class, 'show']);
+Route::get('/exercise_schedules/{id}', [ExerciseScheduleController::class, 'show']);
 
 Route::get('/exercises/{id}', [ExercisesController::class, 'show']);
 
-Route::get('/food/{id}', [FoodController::class, 'show']);
+Route::get('/foods/{id}', [FoodController::class, 'show']);
 
-Route::get('/friend/{id}', [FriendController::class, 'show']);
+Route::get('/friends/{id}', [FriendController::class, 'show']);
 
-Route::get('/heart-beat/{id}', [HeartBeatController::class, 'show']);
+Route::get('/heart_beats/{id}', [HeartBeatController::class, 'show']);
 
-Route::get('/last-trainings/{id}', [LastTrainingsController::class, 'show']);
+Route::get('/last_trainings/{id}', [LastTrainingsController::class, 'show']);
 
-Route::get('/like/{id}', [LikeController::class, 'show']);
+Route::get('/likes/{id}', [LikeController::class, 'show']);
 
-Route::get('/meal-schedule/{id}', [MealScheduleController::class, 'show']);
+Route::get('/meal_schedules/{id}', [MealScheduleController::class, 'show']);
 
-Route::get('/post/{id}', [PostController::class, 'show']);
+Route::get('/posts/{id}', [PostController::class, 'show']);
 
 Route::get('/steps/{id}', [StepsController::class, 'show']);
 
-Route::get('/todays-diet/{id}', [TodaysDietController::class, 'show']);
+Route::get('/todays_diets/{id}', [TodaysDietController::class, 'show']);
 
-Route::get('/training-planing/{id}', [TrainingsPlanningController::class, 'show']);
+Route::get('/training_plannings/{id}', [TrainingsPlanningController::class, 'show']);
 
-Route::get('/user-images/{id}', [UserImagesController::class, 'show']);
+Route::get('/user_images/{id}', [UserImagesController::class, 'show']);
 
-Route::get('/user/{id}', [UserController::class, 'show']);
+Route::get('/users/{id}', [UserController::class, 'show']);
 
-Route::get('/water-consumed/{id}', [WaterConsumedController::class, 'show']);
+Route::get('/water_consumeds/{id}', [WaterConsumedController::class, 'show']);

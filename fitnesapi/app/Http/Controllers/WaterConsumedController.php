@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Water_consumed;
+use App\Models\WaterConsumed;
 
 class WaterConsumedController extends Controller
 {
