@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Heart_beat extends Model
+class HeartBeat extends Model
 {
     use HasFactory;
 }

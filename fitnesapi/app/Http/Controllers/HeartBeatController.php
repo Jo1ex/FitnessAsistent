@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Heart_beat;
+use App\Models\HeartBeat;
 
 class HeartBeatController extends Controller
 {
