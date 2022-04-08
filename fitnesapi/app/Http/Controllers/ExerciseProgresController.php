@@ -17,9 +17,7 @@ class ExerciseProgresController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return ExerciseProgres::findOrFail($id);
-
+    public function show(ExerciseProgres $exerciseProgres) {
+        return $exerciseProgres;
     }
 }

@@ -16,9 +16,7 @@ class UserImagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return UserImages::findOrFail($id);
-
+    public function show(UserImages $userImages) {
+        return $userImages;
     }
 }

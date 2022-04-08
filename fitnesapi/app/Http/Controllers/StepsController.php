@@ -16,9 +16,7 @@ class StepsController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return Steps::findOrFail($id);
-
+    public function show(Steps $steps) {
+        return $steps;
     }
 }

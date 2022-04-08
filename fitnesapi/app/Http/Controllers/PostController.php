@@ -16,9 +16,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return Post::findOrFail($id);
-
+    public function show(Post $post) {
+        return $post;
     }
 }

@@ -16,9 +16,7 @@ class FriendController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return Friend::findOrFail($id);
-
+    public function show(Friend $friend) {
+        return $friend;
     }
 }

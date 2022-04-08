@@ -16,9 +16,7 @@ class ExercisesController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return Exercises::findOrFail($id);
-
+    public function show(Exercises $exercises) {
+        return $exercises;
     }
 }

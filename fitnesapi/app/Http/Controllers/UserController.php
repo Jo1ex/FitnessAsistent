@@ -16,9 +16,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return User::findOrFail($id);
-
+    public function show(User $user) {
+        return $user;
     }
 }

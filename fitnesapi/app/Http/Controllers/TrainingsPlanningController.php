@@ -16,9 +16,7 @@ class TrainingsPlanningController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return TrainingsPlanning::findOrFail($id);
-
+    public function show(TrainingsPlanning $trainingsPlanning) {
+        return $trainingsPlanning;
     }
 }

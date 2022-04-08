@@ -16,9 +16,7 @@ class LikeController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return Like::findOrFail($id);
-
+    public function show(Like $like) {
+        return $like;
     }
 }

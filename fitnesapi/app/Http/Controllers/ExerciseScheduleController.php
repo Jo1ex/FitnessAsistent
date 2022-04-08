@@ -16,9 +16,7 @@ class ExerciseScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return ExerciseSchedule::findOrFail($id);
-
+    public function show(ExerciseSchedule $exerciseSchedule) {
+        return $exerciseSchedule;
     }
 }

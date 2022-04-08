@@ -16,9 +16,7 @@ class TodaysDietController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return TodaysDiet::findOrFail($id);
-
+    public function show(TodaysDiet $todaysDiet) {
+        return $todaysDiet;
     }
 }

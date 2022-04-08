@@ -92,79 +92,38 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::apiResource('chats', ChatController::class)->only(['index', 'show']);
 
+Route::apiResource('comments', CommentController::class)->only(['index', 'show']);
 
-Route::get('/chats', [ChatController::class, 'index']);
+Route::apiResource('exercise-progres', ExerciseProgresController::class)->only(['index', 'show']);
 
-Route::get('/comments', [CommentController::class, 'index']);
+Route::apiResource('exercise-schedules', ExerciseScheduleController::class)->only(['index', 'show']);
 
-Route::get('/exercise_progress', [ExerciseProgresController::class, 'index']);
+Route::apiResource('exercises', ExercisesController::class)->only(['index', 'show']);
 
-Route::get('/exercise_schedules', [ExerciseScheduleController::class, 'index']);
+Route::apiResource('foods', FoodController::class)->only(['index', 'show']);
 
-Route::get('/exercises', [ExercisesController::class, 'index']);
+Route::apiResource('friends', FriendController::class)->only(['index', 'show']);
 
-Route::get('/foods', [FoodController::class, 'index']);
+Route::apiResource('heart-beats', HeartBeatController::class)->only(['index', 'show']);
 
-Route::get('/friends', [FriendController::class, 'index']);
+Route::apiResource('last-trainings', LastTrainingsController::class)->only(['index', 'show']);
 
-Route::get('/heart_beats', [HeartBeatController::class, 'index']);
+Route::apiResource('likes', LikeController::class)->only(['index', 'show']);
 
-Route::get('/last_trainings', [LastTrainingsController::class, 'index']);
+Route::apiResource('meal-schedules', MealScheduleController::class)->only(['index', 'show']);
 
-Route::get('/likes', [LikeController::class, 'index']);
+Route::apiResource('posts', PostController::class)->only(['index', 'show']);
 
-Route::get('/meal_schedules', [MealScheduleController::class, 'index']);
+Route::apiResource('steps', StepsController::class)->only(['index', 'show']);
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::apiResource('todays-diets', TodaysDietController::class)->only(['index', 'show']);
 
-Route::get('/steps', [StepsController::class, 'index']);
+Route::apiResource('training-plannings', TrainingsPlanningController::class)->only(['index', 'show']);
 
-Route::get('/todays_diets', [TodaysDietController::class, 'index']);
+Route::apiResource('user-images', UserImagesController::class)->only(['index', 'show']);
 
-Route::get('/training_plannings', [TrainingsPlanningController::class, 'index']);
+Route::apiResource('users', UserController::class)->only(['index', 'show']);
 
-Route::get('/user_images', [UserImagesController::class, 'index']);
-
-Route::get('/users', [UserController::class, 'index']);
-
-Route::get('/water_consumeds', [WaterConsumedController::class, 'index']);
-
-
-
-
-Route::get('/chats/{id}', [ChatController::class, 'show']);
-
-Route::get('/comments/{id}', [CommentController::class, 'show']);
-
-Route::get('/exercise_progress/{id}', [ExerciseProgresController::class, 'show']);
-
-Route::get('/exercise_schedules/{id}', [ExerciseScheduleController::class, 'show']);
-
-Route::get('/exercises/{id}', [ExercisesController::class, 'show']);
-
-Route::get('/foods/{id}', [FoodController::class, 'show']);
-
-Route::get('/friends/{id}', [FriendController::class, 'show']);
-
-Route::get('/heart_beats/{id}', [HeartBeatController::class, 'show']);
-
-Route::get('/last_trainings/{id}', [LastTrainingsController::class, 'show']);
-
-Route::get('/likes/{id}', [LikeController::class, 'show']);
-
-Route::get('/meal_schedules/{id}', [MealScheduleController::class, 'show']);
-
-Route::get('/posts/{id}', [PostController::class, 'show']);
-
-Route::get('/steps/{id}', [StepsController::class, 'show']);
-
-Route::get('/todays_diets/{id}', [TodaysDietController::class, 'show']);
-
-Route::get('/training_plannings/{id}', [TrainingsPlanningController::class, 'show']);
-
-Route::get('/user_images/{id}', [UserImagesController::class, 'show']);
-
-Route::get('/users/{id}', [UserController::class, 'show']);
-
-Route::get('/water_consumeds/{id}', [WaterConsumedController::class, 'show']);
+Route::apiResource('water-consumeds', WaterConsumedController::class)->only(['index', 'show']);
