@@ -16,9 +16,7 @@ class FoodController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return Food::findOrFail($id);
-
+    public function show(Food $food) {
+        return $food;
     }
 }

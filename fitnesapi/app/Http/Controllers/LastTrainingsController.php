@@ -16,9 +16,7 @@ class LastTrainingsController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return LastTrainings::findOrFail($id);
-
+    public function show(LastTrainings $lastTrainings) {
+        return $lastTrainings;
     }
 }

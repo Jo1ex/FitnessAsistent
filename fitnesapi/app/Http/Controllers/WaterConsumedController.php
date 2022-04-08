@@ -16,9 +16,7 @@ class WaterConsumedController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return WaterConsumed::findOrFail($id);
-
+    public function show(WaterConsumed $waterConsumed) {
+        return $waterConsumed;
     }
 }

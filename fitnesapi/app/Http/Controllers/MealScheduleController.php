@@ -16,9 +16,7 @@ class MealScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return MealSchedule::findOrFail($id);
-
+    public function show(MealSchedule $mealSchedule) {
+        return $mealSchedule;
     }
 }

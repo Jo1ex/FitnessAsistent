@@ -16,9 +16,7 @@ class ChatController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return Chat::findOrFail($id);
-
+    public function show(Chat $chat) {
+        return $chat;
     }
 }

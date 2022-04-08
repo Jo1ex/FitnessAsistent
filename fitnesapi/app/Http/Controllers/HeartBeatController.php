@@ -16,9 +16,7 @@ class HeartBeatController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show($id)
-    {
-        return HeartBeat::findOrFail($id);
-
+    public function show(HeartBeat $heartBeat) {
+        return $heartBeat;
     }
 }
