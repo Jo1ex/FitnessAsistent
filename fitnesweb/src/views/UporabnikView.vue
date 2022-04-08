@@ -1,58 +1,69 @@
 <template>
   <v-app id="/reg">
-    
-<<<<<<< HEAD
-      heloo world
-=======
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="8">
             
-              <v-window v-model="step" align="center" justify="">
-                <v-window-item :value="1">
-                    <v-col cols="12" md="8">
-                      <v-card-text class="mt-12">
-                        <h1
-                          color=#00A99D class="text-center display-2 teal--text text--accent-3"
-                        >Dobrodosli!</h1>
-                        
-                        <h4 class="text-center mt-4">Vpisite svoj email za prijavo</h4>
-                        <v-form>
-                          <v-text-field
-                            label="Email naslov*"
-                            name="Email"
-                            prepend-icon="e"
-                            type="text"
-                            color="teal accent-2"
-                          />
+            
+            <v-card
+    class="mx-auto"
+    color="#ECECEC"
+    light
+    max-width="1200"
+    width="1200"
+  >
+             <v-card-title>
+      <v-list-item-avatar color="grey darken-3" width="200" height="200">
+        <v-icon dark>mdi-account</v-icon> 
+        </v-list-item-avatar>
 
-                          <v-text-field
-                            id="gagagag"
-                            label="gagagag*"
-                            name="ide gasssss"
-                            prepend-icon="g"
-                            type="Geslo"
-                            color="teal accent-2"
-                          />
-                        </v-form>
-                        <v-btn text x-small>Ali ste pozabili geslo?</v-btn>
-                        
-                        <router-link to="/reg">Registracija</router-link>
-                      </v-card-text>
-                      <div class="text-center mt-3">
-                        <v-btn color="#00A99D" elevation="5" outlined x-large bold >Prijavi se</v-btn>
-                      </div>
-                    </v-col>
-                    
-                </v-window-item>
+        
+      
+    </v-card-title>
+    <v-list-item-content>
+          <v-list-item-title>Jolex</v-list-item-title>
+        </v-list-item-content>
+
+    <v-card-text class="text-h9 font-weight-bold">
+      "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.
+      Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+    </v-card-text>
+    <v-row>
+    <v-col
+      v-for="n in 9"
+      :key="n"
+      class="d-flex child-flex"
+      cols="4"
+    >
+      <v-img
+        :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+        :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+        aspect-ratio="1"
+        class="grey lighten-2"
+      >
+        <template v-slot:placeholder>
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
+          >
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row>
+        </template>
+      </v-img>
+    </v-col>
+  </v-row>
+
+            </v-card>
                 
-              </v-window>
+              
             
           </v-col>
         </v-row>
       </v-container>
->>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
-    
   </v-app>
 </template>
 

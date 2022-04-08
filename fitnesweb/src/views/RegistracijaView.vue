@@ -10,10 +10,10 @@
                     <v-col cols="12" md="8">
                       <v-card-text class="mt-12">
                         <h1
-                          color=#00A99D class="text-center display-2 teal--text text--accent-3"
+                          color="#00000" 
                         >Registracija!</h1>
                         
-                        <h4 class="text-center mt-4">Vpisite vse potrebne podatke za registracijo</h4>
+                        <h4 class="text-center mt-5">Vpisite vse potrebne podatke za registracijo</h4>
                         
                         <v-form>
                           
@@ -49,7 +49,7 @@
                             prepend-icon="mdi-key"
                             type="Geslo"
                             color="teal accent-2"
-<<<<<<< HEAD
+
                           >
                           <div class="control">
                               <button class="button" @click="toggleShow"><span class="icon is-small is-right">
@@ -58,9 +58,7 @@
                           </button>
                           </div>
                           </v-text-field>
-=======
-                          />
->>>>>>> b2f8e233d37015321620b9f9714e880dc720f3c0
+                          
                           <v-text-field
                             id="Geslo"
                             label="Potrdi geslo*"
@@ -72,19 +70,22 @@
                         </v-form>
                       
                         
-                        <router-link to="/domov">Prijava</router-link>
+                        
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <router-link to="/verifikacija">Registriraj se</router-link>
+                        <router-link to="/verifikacija" tag="button" outlined>Registriraj se</router-link>
+                        
                       </div>
                     </v-col>
                     
                 </v-window-item>
                 
               </v-window>
+              
             
           </v-col>
         </v-row>
+        <router-link to="/domov">Prijava</router-link>
       </v-container>
     
   </v-app>

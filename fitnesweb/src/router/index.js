@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 
 
@@ -10,7 +9,7 @@ const routes = [
   {
     path: '/domov',
     name: 'domov',
-    component: HomeView
+    component: () => import(/* webpackChunkName: "uporabnik" */ '../views/HomeView.vue')
   },
   {
     path: '/uporabnik',
