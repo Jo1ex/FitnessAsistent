@@ -19,4 +19,11 @@ class ExerciseScheduleController extends Controller
     public function show(ExerciseSchedule $exerciseSchedule) {
         return $exerciseSchedule;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|max:5',
+      'exercise_schedule' => 'required',
+      ]);
+    }
 }

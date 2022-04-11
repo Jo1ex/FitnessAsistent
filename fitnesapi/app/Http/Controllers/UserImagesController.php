@@ -19,4 +19,11 @@ class UserImagesController extends Controller
     public function show(UserImages $userImages) {
         return $userImages;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|max:5',
+      'image_link' => 'required',
+      ]);
+    }
 }

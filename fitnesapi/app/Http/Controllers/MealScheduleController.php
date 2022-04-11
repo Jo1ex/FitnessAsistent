@@ -19,4 +19,11 @@ class MealScheduleController extends Controller
     public function show(MealSchedule $mealSchedule) {
         return $mealSchedule;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|max:5',
+      'meal' => 'required',
+      ]);
+    }
 }

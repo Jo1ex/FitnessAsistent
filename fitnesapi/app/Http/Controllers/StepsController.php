@@ -19,4 +19,11 @@ class StepsController extends Controller
     public function show(Steps $steps) {
         return $steps;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_:id' => 'required|max:5',
+      'steps' => 'required',
+      ]);
+    }
 }

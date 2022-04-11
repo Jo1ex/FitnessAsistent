@@ -19,4 +19,11 @@ class PostController extends Controller
     public function show(Post $post) {
         return $post;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|max:5',
+      'post' => 'required',
+      ]);
+    }
 }

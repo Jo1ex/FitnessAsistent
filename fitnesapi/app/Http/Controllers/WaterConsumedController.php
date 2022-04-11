@@ -19,4 +19,11 @@ class WaterConsumedController extends Controller
     public function show(WaterConsumed $waterConsumed) {
         return $waterConsumed;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|max:5',
+      'water_consumed' => 'required',
+      ]);
+    }
 }

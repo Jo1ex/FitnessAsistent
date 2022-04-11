@@ -19,4 +19,12 @@ class ChatController extends Controller
     public function show(Chat $chat) {
         return $chat;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id1' => 'required|integer|digits:5',
+      'user_id2' => 'required|integer|digits:5',
+      'chat' => 'required',
+      ]);
+    }
 }
