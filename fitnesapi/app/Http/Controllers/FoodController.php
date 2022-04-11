@@ -19,4 +19,11 @@ class FoodController extends Controller
     public function show(Food $food) {
         return $food;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|max:5',
+      'food' => 'required',
+      ]);
+    }
 }

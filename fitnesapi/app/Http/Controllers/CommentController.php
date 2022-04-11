@@ -19,4 +19,12 @@ class CommentController extends Controller
     public function show(Comment $comment) {
         return $comment;
     }
+    public function store(Request $request)
+    {
+      $this->validate($request, [
+      'user_id' => 'required|integer|digits:5',
+      'post_id' => 'required|integer|digits:5',
+      'comment' => 'required',
+      ]);
+    }
 }
