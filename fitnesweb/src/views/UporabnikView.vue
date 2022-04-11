@@ -6,61 +6,67 @@
             
             
             <v-card
-    class="mx-auto"
-    color="#ECECEC"
-    light
-    max-width="1200"
-    width="1200"
-  >
-             <v-card-title>
-      <v-list-item-avatar color="grey darken-3" width="200" height="200">
-        <v-icon dark>mdi-account</v-icon> 
-        </v-list-item-avatar>
-
-        
-      
-    </v-card-title>
-    <v-list-item-content>
-          <v-list-item-title>Jolex</v-list-item-title>
-        </v-list-item-content>
-
-    <v-card-text class="text-h9 font-weight-bold">
-      "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.
-      Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
-    </v-card-text>
-    <v-row>
-    <v-col
-      v-for="n in 9"
-      :key="n"
-      class="d-flex child-flex"
-      cols="4"
-    >
-      <v-img
-        :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-        :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-        aspect-ratio="1"
-        class="grey lighten-2"
-      >
-        <template v-slot:placeholder>
-          <v-row
-            class="fill-height ma-0"
-            align="center"
-            justify="center"
-          >
-            <v-progress-circular
-              indeterminate
-              color="grey lighten-5"
-            ></v-progress-circular>
-          </v-row>
-        </template>
-      </v-img>
-    </v-col>
-  </v-row>
-
-            </v-card>
-                
+              class="mx-auto"
+              color="#ECECEC"
+              light
+              max-width="1200"
+              width="1200"
+            >
+                <v-card-title primary-titles class="justify-center">
+                  <v-icon  light size="175" >mdi-account-circle</v-icon> 
+                </v-card-title>
+              <v-list-item-content>
+                <v-list-item-title-font-size>
+                    <v-list-item-title class="text-h5 font-weight-bold" align="center">JOLEX DISPLAY NAME</v-list-item-title>
+                </v-list-item-title-font-size>
               
-            
+              <v-list-item-title-font-size>
+                    <v-list-item-title class="title" align="center">jolex_username</v-list-item-title>
+                </v-list-item-title-font-size>
+              </v-list-item-content>
+
+              <v-card-text class="subheading" align="center">
+                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well.
+                Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+              </v-card-text>
+              <v-row justify="center" class="fill-height ma-4 mr-3" >
+                <v-btn width="150" height="30" color="#2C6763" dark>SPOROCILO</v-btn>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <v-btn width="150" height="30" color="#2C6763" dark>DODAJ</v-btn>
+              </v-row>
+              <v-row>
+              <v-col
+                v-for="n in 9"
+                :key="n"
+                class="d-flex child-flex"
+                cols="4"
+              >
+                <v-img
+                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                  aspect-ratio="1"
+                  class="grey lighten-2"
+                >
+                  <template v-slot:placeholder>
+                    <v-row
+                      class="fill-height ma-0"
+                      align="center"
+                      justify="center"
+                    >
+                      <v-progress-circular
+                        indeterminate
+                        color="grey lighten-5"
+                      ></v-progress-circular>
+                    </v-row>
+                  </template>
+                </v-img>
+              </v-col>
+            </v-row>
+
+          </v-card>
+
+
+
           </v-col>
         </v-row>
       </v-container>

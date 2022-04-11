@@ -38,23 +38,24 @@
               align="center"
               justify="start"
             >
-              <v-icon class="mr-1">
+              <v-icon class="mr-1" size="35">
                 mdi-heart
               </v-icon>
               <span class="subheading mr-2">561</span>
               
               <span class="mr-2">·</span>
-              <v-icon class="mr-1">
+              <v-icon class="mr-1" size="35">
                 mdi-chat
               </v-icon>
               <span class="subheading mr-2">65</span>
               
               <span class="mr-1">·</span>
-              <v-icon class="mr-1">
+              <v-icon class="mr-1" size="35">
                 mdi-link-variant
               </v-icon>
               <span class="subheading mr-15">93</span>
-              <v-icon class="mr-1" justify="end">
+              <v-spacer></v-spacer>
+              <v-icon class="mr-1" size="35">
                 mdi-bookmark
               </v-icon>
             </v-row>

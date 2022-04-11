@@ -20,6 +20,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "uporabnik" */ '../views/UporabnikView.vue')
   },
   {
+    path: '/uporabnikzaseben',
+    name: 'uporabnikzaseben',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "uporabnik" */ '../views/UporabnikZasebenView.vue')
+  },
+  {
     path: '/registracija',
     name: 'registracija',
     component: () => import(/* webpackChunkName: "registracija" */ '../views/RegistracijaView.vue')
@@ -41,7 +49,7 @@ const routes = [
   },
 
   {
-    path: '/objave',
+    path: '/',
     name: 'objave',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/DomovView.vue')
   },
