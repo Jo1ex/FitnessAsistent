@@ -27,4 +27,9 @@ class LikeController extends Controller
       'like' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $like = Like::where('id', '=', $id)->first();
+        $like->update($request->all());
+    }
 }

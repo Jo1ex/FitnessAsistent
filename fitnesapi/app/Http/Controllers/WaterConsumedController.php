@@ -26,4 +26,9 @@ class WaterConsumedController extends Controller
       'water_consumed' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $waterConsumed = WaterConsumed::where('id', '=', $id)->first();
+        $waterConsumed->update($request->all());
+    }
 }

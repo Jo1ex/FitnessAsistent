@@ -26,4 +26,9 @@ class MealScheduleController extends Controller
       'meal' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $mealSchedule = MealSchedule::where('id', '=', $id)->first();
+        $mealSchedule->update($request->all());
+    }
 }

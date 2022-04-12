@@ -26,4 +26,9 @@ class ExerciseScheduleController extends Controller
       'exercise_schedule' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $exerciseSchedule = ExerciseSchedule::where('id', '=', $id)->first();
+        $exerciseSchedule->update($request->all());
+    }
 }

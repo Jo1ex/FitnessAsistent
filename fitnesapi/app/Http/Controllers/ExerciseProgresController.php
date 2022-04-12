@@ -27,4 +27,9 @@ class ExerciseProgresController extends Controller
       'exercise_progres' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $exerciseProgres = ExerciseProgres::where('id', '=', $id)->first();
+        $exerciseProgres->update($request->all());
+    }
 }

@@ -26,4 +26,9 @@ class ExercisesController extends Controller
       'exercise' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $exercises = Exercises::where('id', '=', $id)->first();
+        $exercises->update($request->all());
+    }
 }

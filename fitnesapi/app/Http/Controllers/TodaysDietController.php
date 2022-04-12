@@ -26,4 +26,9 @@ class TodaysDietController extends Controller
       'food' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $todaysDiet = TodaysDiet::where('id', '=', $id)->first();
+        $todaysDiet->update($request->all());
+    }
 }

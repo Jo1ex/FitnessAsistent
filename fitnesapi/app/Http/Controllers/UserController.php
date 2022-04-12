@@ -18,6 +18,7 @@ class UserController extends Controller
      */
     public function show(User $user) {
         return $user;
+
     }
     public function store(Request $request)
     {
@@ -31,5 +32,15 @@ class UserController extends Controller
       'User_photo' => 'required',
       'bio' => 'required'
       ]);
+    }
+    public function update(Request $request, $id)
+    {
+        $user = User::where('id', '=', $id)->first();
+        $user->update($request->all());
+    }
+    public function destroy(Request $request, $id)
+    {
+        $user = User::where('id', '=', $id)->first();
+        $user->delete();
     }
 }

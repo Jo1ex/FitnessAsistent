@@ -26,4 +26,9 @@ class LastTrainingsController extends Controller
       'last_trainings' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $lastTrainings = LastTtrainings::where('id', '=', $id)->first();
+        $lastTrainings->update($request->all());
+    }
 }

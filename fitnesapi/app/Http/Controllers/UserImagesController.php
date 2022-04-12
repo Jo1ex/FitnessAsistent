@@ -26,4 +26,9 @@ class UserImagesController extends Controller
       'image_link' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $userImages = UserImages::where('id', '=', $id)->first();
+        $userImages->update($request->all());
+    }
 }

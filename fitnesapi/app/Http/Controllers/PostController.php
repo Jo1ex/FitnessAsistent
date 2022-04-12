@@ -26,4 +26,9 @@ class PostController extends Controller
       'post' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $post = Post::where('id', '=', $id)->first();
+        $post->update($request->all());
+    }
 }
