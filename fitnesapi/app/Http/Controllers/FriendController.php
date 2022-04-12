@@ -27,4 +27,9 @@ class FriendController extends Controller
       'friend' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $friend = Friend::where('id', '=', $id)->first();
+        $friend->update($request->all());
+    }
 }

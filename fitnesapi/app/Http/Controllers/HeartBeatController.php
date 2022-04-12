@@ -26,4 +26,9 @@ class HeartBeatController extends Controller
       'heart_beat' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $heartBeat = HeartBeat::where('id', '=', $id)->first();
+        $heartBeat->update($request->all());
+    }
 }

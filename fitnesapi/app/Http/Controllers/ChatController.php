@@ -27,4 +27,9 @@ class ChatController extends Controller
       'chat' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $chat = Chat::where('id', '=', $id)->first();
+        $chat->update($request->all());
+    }
 }

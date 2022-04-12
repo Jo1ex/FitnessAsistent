@@ -26,4 +26,9 @@ class FoodController extends Controller
       'food' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $food = Food::where('id', '=', $id)->first();
+        $food->update($request->all());
+    }
 }

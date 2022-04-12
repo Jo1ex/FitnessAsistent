@@ -25,4 +25,9 @@ class TrainingsPlanningController extends Controller
       'user_id' => 'required|max:5',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $trainingsPlanning = TrainingsPlanning::where('id', '=', $id)->first();
+        $trainingsPlanning->update($request->all());
+    }
 }

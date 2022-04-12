@@ -26,4 +26,9 @@ class StepsController extends Controller
       'steps' => 'required',
       ]);
     }
+    public function update(Request $request, $id)
+    {
+        $steps = Steps::where('id', '=', $id)->first();
+        $steps->update($request->all());
+    }
 }
