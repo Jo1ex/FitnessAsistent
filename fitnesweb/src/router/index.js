@@ -53,6 +53,11 @@ const routes = [
     name: 'objave',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/DomovView.vue')
   },
+  {
+    path: '/nastavitve',
+    name: 'nastavitve',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/NastavitveView.vue')
+  },
 ]
 
 const router = new VueRouter({

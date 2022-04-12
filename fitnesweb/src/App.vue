@@ -14,7 +14,7 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
         
-      <router-link to="/domov">
+      <router-link to="/">
           <v-icon >mdi-home</v-icon> 
       </router-link>
       
