@@ -32,4 +32,9 @@ class LikeController extends Controller
         $like = Like::where('id', '=', $id)->first();
         $like->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $like = Like::where('id', '=', $id)->first();
+        $like->delete();
+    }
 }

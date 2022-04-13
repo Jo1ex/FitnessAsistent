@@ -31,4 +31,9 @@ class ExercisesController extends Controller
         $exercises = Exercises::where('id', '=', $id)->first();
         $exercises->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $exercises = Exercises::where('id', '=', $id)->first();
+        $exercises->delete();
+    }
 }

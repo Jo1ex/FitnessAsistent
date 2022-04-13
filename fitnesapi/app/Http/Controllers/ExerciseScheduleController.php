@@ -31,4 +31,9 @@ class ExerciseScheduleController extends Controller
         $exerciseSchedule = ExerciseSchedule::where('id', '=', $id)->first();
         $exerciseSchedule->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $exerciseSchedule = ExerciseScheudle::where('id', '=', $id)->first();
+        $exerciseSchedule->delete();
+    }
 }

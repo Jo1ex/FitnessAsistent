@@ -30,4 +30,9 @@ class TrainingsPlanningController extends Controller
         $trainingsPlanning = TrainingsPlanning::where('id', '=', $id)->first();
         $trainingsPlanning->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $trainingsPlanning = TrainingsPlanning::where('id', '=', $id)->first();
+        $trainingsPlanning->delete();
+    }
 }

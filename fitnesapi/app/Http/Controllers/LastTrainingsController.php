@@ -31,4 +31,9 @@ class LastTrainingsController extends Controller
         $lastTrainings = LastTtrainings::where('id', '=', $id)->first();
         $lastTrainings->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $lastTrainings = LastTrainings::where('id', '=', $id)->first();
+        $lastTrainings->delete();
+    }
 }

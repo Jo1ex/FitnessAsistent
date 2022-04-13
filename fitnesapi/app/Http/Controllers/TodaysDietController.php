@@ -31,4 +31,9 @@ class TodaysDietController extends Controller
         $todaysDiet = TodaysDiet::where('id', '=', $id)->first();
         $todaysDiet->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $todaysDiet = TodaysDiet::where('id', '=', $id)->first();
+        $todaysDiet->delete();
+    }
 }

@@ -32,4 +32,9 @@ class CommentController extends Controller
         $comment = Comment::where('id', '=', $id)->first();
         $comment->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $comment = Comment::where('id', '=', $id)->first();
+        $comment->delete();
+    }
 }

@@ -31,4 +31,9 @@ class PostController extends Controller
         $post = Post::where('id', '=', $id)->first();
         $post->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $post = Post::where('id', '=', $id)->first();
+        $post->delete();
+    }
 }
