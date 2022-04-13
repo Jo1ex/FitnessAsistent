@@ -32,4 +32,9 @@ class ChatController extends Controller
         $chat = Chat::where('id', '=', $id)->first();
         $chat->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $chat = Chat::where('id', '=', $id)->first();
+        $chat->delete();
+    }
 }

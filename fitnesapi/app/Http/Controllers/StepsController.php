@@ -31,4 +31,9 @@ class StepsController extends Controller
         $steps = Steps::where('id', '=', $id)->first();
         $steps->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $steps = Steps::where('id', '=', $id)->first();
+        $steps->delete();
+    }
 }

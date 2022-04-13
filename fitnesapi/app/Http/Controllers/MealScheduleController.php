@@ -31,4 +31,9 @@ class MealScheduleController extends Controller
         $mealSchedule = MealSchedule::where('id', '=', $id)->first();
         $mealSchedule->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $mealSchedule = MealScheudle::where('id', '=', $id)->first();
+        $mealSchedule->delete();
+    }
 }

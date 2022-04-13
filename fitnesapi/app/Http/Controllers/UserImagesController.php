@@ -31,4 +31,9 @@ class UserImagesController extends Controller
         $userImages = UserImages::where('id', '=', $id)->first();
         $userImages->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $userImages = UserImages::where('id', '=', $id)->first();
+        $userImages->delete();
+    }
 }

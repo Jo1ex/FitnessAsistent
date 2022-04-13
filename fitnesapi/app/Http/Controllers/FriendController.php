@@ -32,4 +32,9 @@ class FriendController extends Controller
         $friend = Friend::where('id', '=', $id)->first();
         $friend->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $friend = Friend::where('id', '=', $id)->first();
+        $friend->delete();
+    }
 }

@@ -32,4 +32,9 @@ class ExerciseProgresController extends Controller
         $exerciseProgres = ExerciseProgres::where('id', '=', $id)->first();
         $exerciseProgres->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $exerciseProgres = ExerciseProgres::where('id', '=', $id)->first();
+        $exerciseProgres->delete();
+    }
 }

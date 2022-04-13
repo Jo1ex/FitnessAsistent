@@ -92,38 +92,38 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('chats', ChatController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('chats', ChatController::class);
 
-Route::apiResource('comments', CommentController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('comments', CommentController::class);
 
-Route::apiResource('exercise-progres', ExerciseProgresController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('exercise-progres', ExerciseProgresController::class);
 
-Route::apiResource('exercise-schedules', ExerciseScheduleController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('exercise-schedules', ExerciseScheduleController::class);
 
-Route::apiResource('exercises', ExercisesController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('exercises', ExercisesController::class);
 
-Route::apiResource('foods', FoodController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('foods', FoodController::class);
 
-Route::apiResource('friends', FriendController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('friends', FriendController::class);
 
-Route::apiResource('heart-beats', HeartBeatController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('heart-beats', HeartBeatController::class);
 
-Route::apiResource('last-trainings', LastTrainingsController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('last-trainings', LastTrainingsController::class);
 
-Route::apiResource('likes', LikeController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('likes', LikeController::class);
 
-Route::apiResource('meal-schedules', MealScheduleController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('meal-schedules', MealScheduleController::class);
 
-Route::apiResource('posts', PostController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('posts', PostController::class);
 
-Route::apiResource('steps', StepsController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('steps', StepsController::class);
 
-Route::apiResource('todays-diets', TodaysDietController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('todays-diets', TodaysDietController::class);
 
-Route::apiResource('training-plannings', TrainingsPlanningController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('training-plannings', TrainingsPlanningController::class);
 
-Route::apiResource('user-images', UserImagesController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('user-images', UserImagesController::class);
 
-Route::apiResource('users', UserController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('users', UserController::class);
 
-Route::apiResource('water-consumeds', WaterConsumedController::class)->only(['index', 'show', 'update', 'destroy', 'store']);
+Route::apiResource('water-consumeds', WaterConsumedController::class);

@@ -31,4 +31,9 @@ class FoodController extends Controller
         $food = Food::where('id', '=', $id)->first();
         $food->update($request->all());
     }
+    public function destroy(Request $request, $id)
+    {
+        $food = Food::where('id', '=', $id)->first();
+        $food->delete();
+    }
 }
