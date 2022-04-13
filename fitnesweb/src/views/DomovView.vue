@@ -1,5 +1,54 @@
 <template>
   <v-app id="/reg">  
+    <v-toolbar 
+    dense
+    color="#009999"
+    dark
+    >
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-send-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/nastavitve">
+        <v-icon>mdi-cog-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-plus-box-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-flag-outline</v-icon>
+      </router-link>
+      <v-spacer></v-spacer>
+      
+      <v-text-field
+            placeholder="Search:"
+            solo
+            rounded
+            dense
+            light
+            justify=center
+            align=center
+          >
+          </v-text-field>
+
+      <v-spacer></v-spacer>
+
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-account-circle</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-calendar</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-format-align-justify</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </v-toolbar>
     <v-container class="fill-height" fluid>
                 
       <v-card
@@ -38,26 +87,34 @@
               align="center"
               justify="start"
             >
+              <v-btn icon>
               <v-icon class="mr-1" size="35">
                 mdi-heart
               </v-icon>
+              </v-btn>
               <span class="subheading mr-2">561</span>
               
               <span class="mr-2">·</span>
+              <v-btn icon>
               <v-icon class="mr-1" size="35">
                 mdi-chat
               </v-icon>
+              </v-btn>
               <span class="subheading mr-2">65</span>
               
               <span class="mr-1">·</span>
+              <v-btn icon>
               <v-icon class="mr-1" size="35">
                 mdi-link-variant
               </v-icon>
+              </v-btn>
               <span class="subheading mr-15">93</span>
               <v-spacer></v-spacer>
+              <v-btn icon>
               <v-icon class="mr-1" size="35">
                 mdi-bookmark
               </v-icon>
+              </v-btn>
             </v-row>
           </v-list-item>
         </v-card-actions>

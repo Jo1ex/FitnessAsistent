@@ -7,9 +7,9 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/domov',
-    name: 'domov',
-    component: () => import(/* webpackChunkName: "uporabnik" */ '../views/HomeView.vue')
+    path: '/prijava',
+    name: 'prijava',
+    component: () => import(/* webpackChunkName: "uporabnik" */ '../views/PrijavaView.vue')
   },
   {
     path: '/uporabnik',
@@ -57,6 +57,11 @@ const routes = [
     path: '/nastavitve',
     name: 'nastavitve',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/NastavitveView.vue')
+  },
+  {
+    path: '/urnikvadbe',
+    name: 'urnikvadbe',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/UrnikVadbeView.vue')
   },
 ]
 

@@ -1,5 +1,42 @@
 <template>
   <v-app id="/reg">
+      <v-toolbar 
+    dense
+    color="#009999"
+    dark
+    >
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-send-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/nastavitve">
+        <v-icon>mdi-cog-outline</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-plus-box-outline</v-icon>
+      </router-link>
+      
+      <v-spacer></v-spacer>
+      
+      <v-toolbar-title>NASTAVITVE</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-account-circle</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-calendar</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <router-link to="/urnikvadbe">
+        <v-icon>mdi-format-align-justify</v-icon>
+      </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </v-toolbar>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="8">

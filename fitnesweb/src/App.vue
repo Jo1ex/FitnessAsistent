@@ -4,23 +4,19 @@
     <v-toolbar dense
     color="#2C6763"
     dark>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <v-toolbar-title>FITNES ASISTENT</v-toolbar-title>
 
       <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-        
+  
       <router-link to="/">
           <v-icon >mdi-home</v-icon> 
       </router-link>
-      
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <router-link to="/uporabnik">
         <v-icon>mdi-account</v-icon>
       </router-link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </v-toolbar>
     <router-view />
   </div>
