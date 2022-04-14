@@ -63,6 +63,11 @@ const routes = [
     name: 'urnikvadbe',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/UrnikVadbeView.vue')
   },
+  {
+    path: '/urnikprehrane',
+    name: 'urnikprehrane',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/UrnikPrehraneView.vue')
+  },
 ]
 
 const router = new VueRouter({
