@@ -36,4 +36,11 @@ class WaterConsumedController extends Controller
         $waterConsumed = WaterConsumed::where('id', '=', $id)->first();
         $waterConsumed->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'water_consumed'=>'required',
+        ]);
+            return $request->input();
+        }
 }

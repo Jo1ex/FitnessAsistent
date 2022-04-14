@@ -36,4 +36,11 @@ class ExercisesController extends Controller
         $exercises = Exercises::where('id', '=', $id)->first();
         $exercises->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'exercises'=>'required',
+        ]);
+            return $request->input();
+        }
 }

@@ -36,4 +36,12 @@ class MealScheduleController extends Controller
         $mealSchedule = MealScheudle::where('id', '=', $id)->first();
         $mealSchedule->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'meal'=>'required',
+
+        ]);
+            return $request->input();
+        }
 }

@@ -35,4 +35,11 @@ class TrainingsPlanningController extends Controller
         $trainingsPlanning = TrainingsPlanning::where('id', '=', $id)->first();
         $trainingsPlanning->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'trainings_planning'=>'required',
+        ]);
+            return $request->input();
+        }
 }

@@ -36,4 +36,11 @@ class ExerciseScheduleController extends Controller
         $exerciseSchedule = ExerciseScheudle::where('id', '=', $id)->first();
         $exerciseSchedule->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'exercise_schedule'=>'required',
+        ]);
+            return $request->input();
+        }
 }

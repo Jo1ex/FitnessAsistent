@@ -36,4 +36,11 @@ class UserImagesController extends Controller
         $userImages = UserImages::where('id', '=', $id)->first();
         $userImages->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'image_link'=>'required',
+        ]);
+            return $request->input();
+        }
 }

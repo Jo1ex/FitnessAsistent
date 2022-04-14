@@ -36,4 +36,11 @@ class LastTrainingsController extends Controller
         $lastTrainings = LastTrainings::where('id', '=', $id)->first();
         $lastTrainings->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'last_trainings'=>'required',
+        ]);
+            return $request->input();
+        }
 }

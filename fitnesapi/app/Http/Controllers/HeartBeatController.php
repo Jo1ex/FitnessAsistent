@@ -36,4 +36,11 @@ class HeartBeatController extends Controller
         $heartBeat = HeartBeat::where('id', '=', $id)->first();
         $heartBeat->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'heart_beat'=>'required',
+        ]);
+            return $request->input();
+        }
 }

@@ -37,4 +37,11 @@ class CommentController extends Controller
         $comment = Comment::where('id', '=', $id)->first();
         $comment->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'comment'=>'required',
+        ]);
+            return $request->input();
+        }
 }

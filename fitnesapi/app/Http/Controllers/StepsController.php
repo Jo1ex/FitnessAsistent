@@ -36,4 +36,11 @@ class StepsController extends Controller
         $steps = Steps::where('id', '=', $id)->first();
         $steps->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'steps'=>'required',
+        ]);
+            return $request->input();
+        }
 }
