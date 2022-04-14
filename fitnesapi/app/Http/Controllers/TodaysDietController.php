@@ -36,4 +36,11 @@ class TodaysDietController extends Controller
         $todaysDiet = TodaysDiet::where('id', '=', $id)->first();
         $todaysDiet->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'food'=>'required',
+        ]);
+            return $request->input();
+        }
 }

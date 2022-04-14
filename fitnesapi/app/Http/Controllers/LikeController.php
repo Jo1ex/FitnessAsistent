@@ -37,4 +37,11 @@ class LikeController extends Controller
         $like = Like::where('id', '=', $id)->first();
         $like->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'like'=>'required',
+        ]);
+            return $request->input();
+        }
 }

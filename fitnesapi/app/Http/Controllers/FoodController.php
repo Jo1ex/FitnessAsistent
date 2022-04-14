@@ -36,4 +36,11 @@ class FoodController extends Controller
         $food = Food::where('id', '=', $id)->first();
         $food->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'food'=>'required',
+        ]);
+            return $request->input();
+        }
 }

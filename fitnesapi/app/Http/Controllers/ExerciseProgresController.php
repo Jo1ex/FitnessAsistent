@@ -37,4 +37,11 @@ class ExerciseProgresController extends Controller
         $exerciseProgres = ExerciseProgres::where('id', '=', $id)->first();
         $exerciseProgres->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'exercise_progres'=>'required',
+        ]);
+            return $request->input();
+        }
 }

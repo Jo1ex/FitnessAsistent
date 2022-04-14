@@ -37,4 +37,12 @@ class FriendController extends Controller
         $friend = Friend::where('id', '=', $id)->first();
         $friend->delete();
     }
+    function getData(Request $request)
+        {
+            $request->validate([
+            'user_id1'=>'required',
+            'user_id2'=>'required',
+        ]);
+            return $request->input();
+        }
 }
