@@ -321,7 +321,7 @@ export default {
       value: '',
       events: [],
       colors: ['#00A99D'],
-      names: ['Prsa', 'Triceps', 'Ramena', 'Biceps', 'Hrbtne misice', 'Four-arm', 'Noge', 'Trebusnjaci'],
+      names: ['Push', 'Pull', 'Legs'],
     }),
     methods: {
       getEvents ({ start, end }) {

@@ -111,10 +111,10 @@
                   <div>
                     <v-card-text class="text-h5" >Danasnja prehrana</v-card-text>
                     <v-card
-                    class="mx-auto"
+                    class="mx-3"
                     color="#EFEFEF"
                     light 
-                    width="850"
+                    elevation="5"
                     >
                     <v-card-text class="text-h6" >Kalorije</v-card-text>
                     <v-progress-linear
@@ -123,6 +123,7 @@
                       rounded
                       v-model="valueDeterminate"
                       color="#2C6763"
+                      mx-3
                     ></v-progress-linear>
                     
                     <v-card-text class="text-h6" >Protenini</v-card-text>
@@ -154,19 +155,19 @@
                     <br>
                     </v-card>
                     <v-card
-                      class="mx-auto text-center ma-5"
+                      class="mx-3 text-center ma-5"
                       color="#009999"
                       dark
                       max-width="600"
                       
                     >
                       <v-card-text>
-                        <v-sheet color="rgba(0, 0, 0, .12)">
+                        <v-sheet color="white">
                           <v-sparkline
                             :value="value"
-                            color="rgba(255, 255, 255, .7)"
-                            height="100"
-                            padding="15"
+                            color="rgba(0, 208, 193, .7)"
+                            height="160"
+                            padding="20"
                             stroke-linecap="round"
                             smooth
                           >
@@ -232,7 +233,7 @@
                     :key="i"
                   >
                     <v-expansion-panel-header>
-                      Ramena
+                      Kosilo
                     </v-expansion-panel-header>
                       <v-expansion-panel-content>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -250,51 +251,10 @@
                     :key="i"
                   >
                     <v-expansion-panel-header>
-                      Pull
+                      Solate
                     </v-expansion-panel-header>
                       <v-expansion-panel-content>
-                        <v-expansion-panels rounded class="mt-3">
-                  <v-expansion-panel
-                    v-for="(item,i) in 1"
-                    :key="i"
-                  >
-                    <v-expansion-panel-header>
-                      Biceps
-                    </v-expansion-panel-header> 
-                      <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </v-expansion-panel-content>
-                  </v-expansion-panel>
-                </v-expansion-panels>
-
-                <v-expansion-panels rounded class="mt-3">
-                  <v-expansion-panel
-                    v-for="(item,i) in 1"
-                    :key="i"
-                  >
-                    <v-expansion-panel-header>
-                      Hrbtne misice
-                    </v-expansion-panel-header>
-                      <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </v-expansion-panel-content>
-                    
-                  </v-expansion-panel>
-                </v-expansion-panels>
-                <v-expansion-panels rounded class="mt-3">
-                  <v-expansion-panel
-                    v-for="(item,i) in 1"
-                    :key="i"
-                  >
-                    <v-expansion-panel-header>
-                      Four arm
-                    </v-expansion-panel-header>
-                      <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </v-expansion-panel-content>
-                    
-                  </v-expansion-panel>
-                </v-expansion-panels>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       </v-expansion-panel-content>
                     
                   </v-expansion-panel>
@@ -307,19 +267,10 @@
                     :key="i"
                   >
                     <v-expansion-panel-header>
-                      Legs
+                      Proteinski sejki
                     </v-expansion-panel-header>
                       <v-expansion-panel-content>
-                        <v-expansion-panels rounded class="mt-3">
-                  <v-expansion-panel
-                    v-for="(item,i) in 1"
-                    :key="i"
-                  >
-                    <v-expansion-panel-header>
-                      Noge
-                    </v-expansion-panel-header>
-                      <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       </v-expansion-panel-content>
                     
                   </v-expansion-panel>
@@ -330,14 +281,24 @@
                     :key="i"
                   >
                     <v-expansion-panel-header>
-                      Trebusnjaci
+                      Prigrizki
                     </v-expansion-panel-header>
                       <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       </v-expansion-panel-content>
                     
                   </v-expansion-panel>
                 </v-expansion-panels>
+                <v-expansion-panels rounded class="mt-3">
+                  <v-expansion-panel
+                    v-for="(item,i) in 1"
+                    :key="i"
+                  >
+                    <v-expansion-panel-header>
+                      Vecerja
+                    </v-expansion-panel-header>
+                      <v-expansion-panel-content>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       </v-expansion-panel-content>
                     
                   </v-expansion-panel>
