@@ -21,11 +21,16 @@ class ChatController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id1' => 'required|integer|digits:5',
-      'user_id2' => 'required|integer|digits:5',
-      'chat' => 'required',
+      $request->validate([
+      'user_id1' => 'required|integer',
+      'user_id2' => 'required|integer',
+      'message' => 'required|max:255',
       ]);
+      $chat= new Chat;
+      $chat->user_id1=$request->user_id1;
+      $chat->user_id2=$request->user_id2;
+      $chat->message=$request->message;
+      $chat=$chat->save();
     }
     public function update(Request $request, $id)
     {
@@ -37,11 +42,4 @@ class ChatController extends Controller
         $chat = Chat::where('id', '=', $id)->first();
         $chat->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'message'=>'required',
-        ]);
-            return $request->input();
-        }
 }

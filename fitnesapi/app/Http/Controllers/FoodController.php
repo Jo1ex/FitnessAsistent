@@ -21,10 +21,14 @@ class FoodController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'food' => 'required',
       ]);
+      $food= new Food;
+      $food->user_id1=$request->user_id1;
+      $food->food=$request->food;
+      $food=$food->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class FoodController extends Controller
         $food = Food::where('id', '=', $id)->first();
         $food->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'food'=>'required',
-        ]);
-            return $request->input();
-        }
 }

@@ -21,10 +21,14 @@ class StepsController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_:id' => 'required|max:5',
+      $request->validate([
+      'user_:id' => 'required|integer',
       'steps' => 'required',
       ]);
+      $steps= new Steps;
+      $steps->user_id=$request->user_id;
+      $steps->steps=$request->steps;
+      $steps=$steps->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class StepsController extends Controller
         $steps = Steps::where('id', '=', $id)->first();
         $steps->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'steps'=>'required',
-        ]);
-            return $request->input();
-        }
 }

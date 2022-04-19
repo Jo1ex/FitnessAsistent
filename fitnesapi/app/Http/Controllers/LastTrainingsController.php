@@ -21,10 +21,14 @@ class LastTrainingsController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'last_trainings' => 'required',
       ]);
+      $lastTrainings= new TrainingsPlanning;
+      $lastTrainings->user_id=$request->user_id;
+      $lastTrainings->last_trainings=$request->last_trainings;
+      $lastTrainings=$lastTrainings->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class LastTrainingsController extends Controller
         $lastTrainings = LastTrainings::where('id', '=', $id)->first();
         $lastTrainings->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'last_trainings'=>'required',
-        ]);
-            return $request->input();
-        }
 }

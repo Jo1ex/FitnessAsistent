@@ -21,11 +21,15 @@ class LikeController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
-      'post_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
+      'post_id' => 'required|integer',
       'like' => 'required',
       ]);
+      $like= new TrainingsPlanning;
+      $like->user_id=$request->user_id;
+      $like->post_id=$request->post_id;
+      $like=$like->save();
     }
     public function update(Request $request, $id)
     {
@@ -37,11 +41,4 @@ class LikeController extends Controller
         $like = Like::where('id', '=', $id)->first();
         $like->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'like'=>'required',
-        ]);
-            return $request->input();
-        }
 }

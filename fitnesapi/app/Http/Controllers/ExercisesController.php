@@ -21,10 +21,14 @@ class ExercisesController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'exercise' => 'required',
       ]);
+      $exercises= new Exercises;
+      $exercises->user_id=$request->user_id;
+      $exercises->exercises=$request->exercises;
+      $friend=$friend->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class ExercisesController extends Controller
         $exercises = Exercises::where('id', '=', $id)->first();
         $exercises->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'exercises'=>'required',
-        ]);
-            return $request->input();
-        }
 }

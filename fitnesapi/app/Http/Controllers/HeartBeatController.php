@@ -21,10 +21,14 @@ class HeartBeatController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'heart_beat' => 'required',
       ]);
+      $heartBeat= new HeartBeat;
+      $heartBeat->user_id=$request->user_id;
+      $heartBeat->heart_beat=$request->heart_beat;
+      $heartBeat=$heartBeat->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class HeartBeatController extends Controller
         $heartBeat = HeartBeat::where('id', '=', $id)->first();
         $heartBeat->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'heart_beat'=>'required',
-        ]);
-            return $request->input();
-        }
 }
