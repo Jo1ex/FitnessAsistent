@@ -50,55 +50,7 @@
               width="1000"
               height="850"
             >
-            <v-sheet
-      tile
-      height="54"
-      class="d-flex"
-      rounded
-    >
-      <v-btn
-        icon
-        class="ma-2"
-        @click="$refs.calendar.prev()"
-      >
-        <v-icon>mdi-chevron-left</v-icon>
-      </v-btn>
-      <v-select
-        v-model="type"
-        :items="types"
-        dense
-        outlined
-        hide-details
-        class="ma-2"
-        label="vrsta"
-      ></v-select>
-      <v-select
-        v-model="mode"
-        :items="modes"
-        dense
-        outlined
-        hide-details
-        label="način prekrivanja dogodkov"
-        class="ma-2"
-      ></v-select>
-      <v-select
-        v-model="weekday"
-        :items="weekdays"
-        dense
-        outlined
-        hide-details
-        label="dnevi v tednu"
-        class="ma-2"
-      ></v-select>
-      <v-spacer></v-spacer>
-      <v-btn
-        icon
-        class="ma-2"
-        @click="$refs.calendar.next()"
-      >
-        <v-icon>mdi-chevron-right</v-icon>
-      </v-btn>
-    </v-sheet>
+            
               <v-row>
               <v-card
                 class="mx-auto ma-5 ml-7"
@@ -106,9 +58,51 @@
                 light 
                 width="570"
                 elevation="5"
-                height="750"
+                height="820"
                 >
                   <div>
+                   <v-sheet height="70">
+        <v-toolbar
+          flat
+        >
+          <v-btn
+            outlined
+            class="mr-4"
+            color="grey darken-2"
+            @click="setToday"
+          >
+            Today
+          </v-btn>
+          <v-btn
+            fab
+            text
+            small
+            color="grey darken-2"
+            @click="prev"
+          >
+            <v-icon small>
+              mdi-chevron-left
+            </v-icon>
+          </v-btn>
+          <v-btn
+            fab
+            text
+            small
+            color="grey darken-2"
+            @click="next"
+          >
+            <v-icon small>
+              mdi-chevron-right
+            </v-icon>
+          </v-btn>
+          <v-toolbar-title v-if="$refs.calendar">
+            {{ $refs.calendar.title }}
+          </v-toolbar-title>
+          <v-spacer></v-spacer>
+        </v-toolbar>
+      </v-sheet>
+    
+      
                     <v-card-text class="text-h5" >Danasnja prehrana</v-card-text>
                     <v-card
                     class="mx-3"
@@ -155,28 +149,25 @@
                     <br>
                     </v-card>
                     <v-card
-                      class="mx-3 text-center ma-5"
-                      color="#009999"
-                      dark
-                      max-width="600"
-                      
+                    class="mx-3"
+                    color="#EFEFEF"
+                    light 
+                    elevation="5"
                     >
-                      <v-card-text>
-                        <v-sheet color="white">
-                          <v-sparkline
-                            :value="value"
-                            color="rgba(0, 208, 193, .7)"
-                            height="160"
-                            padding="20"
-                            stroke-linecap="round"
-                            smooth
-                          >
-                            <template v-slot:label="item">
-                              ${{ item.value }}
-                            </template>
-                          </v-sparkline>
-                        </v-sheet>
-                      </v-card-text>
+                      <v-sparkline
+                        :value="value"
+                        :gradient="gradient"
+                        :smooth="radius || false"
+                        :padding="padding"
+                        :line-width="width"
+                        :stroke-linecap="lineCap"
+                        :gradient-direction="gradientDirection"
+                        :fill="fill"
+                        :type="type"
+                        :auto-line-width="autoLineWidth"
+                        auto-draw
+                        
+                      ></v-sparkline>
 
                       
 
@@ -192,6 +183,24 @@
                 width="370"
                 elevation="5"
                 >
+                <v-row class="fill-height">
+                    <v-col>
+                      
+                      <v-sheet height="820">
+                        <v-calendar
+                          ref="calendar"
+                          v-model="focus"
+                          color="primary"
+                          type="category"
+                          category-show-all
+                          :categories="categories"
+                          :events="events"
+                          :event-color="getEventColor"
+                          @change="fetchEvents"
+                        ></v-calendar>
+                      </v-sheet>
+                    </v-col>
+                  </v-row>
                 </v-card>
               </v-row>
               </v-card>
@@ -325,27 +334,59 @@ export default {
   }
 };
 </script>
+
+<script>
+  const gradients = [
+    ['#222'],
+    ['#42b3f4'],
+    ['red', 'orange', 'yellow'],
+    ['purple', 'violet'],
+    ['#00c6ff', '#F0F', '#FF0'],
+    ['#f72047', '#ffd200', '#1feaea'],
+  ]
+
+  export default {
+    data: () => ({
+      width: 2,
+      radius: 10,
+      padding: 8,
+      lineCap: 'round',
+      gradient: gradients[5],
+      value: [0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0],
+      gradientDirection: 'top',
+      gradients,
+      fill: false,
+      type: 'trend',
+      autoLineWidth: false,
+    }),
+  }
+</script>
 <script>
   export default {
     data: () => ({
-      type: 'month',
-      types: ['mesec', 'teden', 'dan', '4dni'],
-      mode: 'stack',
-      modes: ['sklad', 'stolpec'],
-      weekday: [0, 1, 2, 3, 4, 5, 6],
-      weekdays: [
-        { text: 'Ned - Sob', value: [0, 1, 2, 3, 4, 5, 6] },
-        { text: 'Pon - Ned', value: [1, 2, 3, 4, 5, 6, 0] },
-        { text: 'Pon - Pet', value: [1, 2, 3, 4, 5] },
-        { text: 'Pon, Sre, Pet', value: [1, 3, 5] },
-      ],
-      value: '',
+      focus: '',
       events: [],
       colors: ['#00A99D'],
-      names: ['Prsa', 'Triceps', 'Ramena', 'Biceps', 'Hrbtne misice', 'Four-arm', 'Noge', 'Trebusnjaci'],
+      names: ['Medena palacinka', 'Kava', 'Piscancji zrezek', 'Mleko', 'Pomorance', 'Jabolcna pita', 'Solata', 'Ovsena kasa'],
+      categories: ['John Smith'],
     }),
+    mounted () {
+      this.$refs.calendar.checkChange()
+    },
     methods: {
-      getEvents ({ start, end }) {
+      getEventColor (event) {
+        return event.color
+      },
+      setToday () {
+        this.focus = ''
+      },
+      prev () {
+        this.$refs.calendar.prev()
+      },
+      next () {
+        this.$refs.calendar.next()
+      },
+      fetchEvents ({ start, end }) {
         const events = []
 
         const min = new Date(`${start.date}T00:00:00`)
@@ -366,32 +407,15 @@ export default {
             end: second,
             color: this.colors[this.rnd(0, this.colors.length - 1)],
             timed: !allDay,
+            category: this.categories[this.rnd(0, this.categories.length - 1)],
           })
         }
 
         this.events = events
       },
-      getEventColor (event) {
-        return event.color
-      },
       rnd (a, b) {
         return Math.floor((b - a + 1) * Math.random()) + a
       },
     },
-  }
-</script>
-<script>
-  export default {
-    data: () => ({
-      value: [
-        423,
-        446,
-        675,
-        510,
-        590,
-        610,
-        760,
-      ],
-    }),
   }
 </script>
