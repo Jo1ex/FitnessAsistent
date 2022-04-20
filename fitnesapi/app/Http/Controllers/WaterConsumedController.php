@@ -21,10 +21,14 @@ class WaterConsumedController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'water_consumed' => 'required',
       ]);
+      $waterConsumed= new WaterConsumed;
+      $waterConsumed->user_id=$request->user_id;
+      $waterConsumed->water_consumed=$request->water_consumed;
+      $waterConsumed=$waterConsumed->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class WaterConsumedController extends Controller
         $waterConsumed = WaterConsumed::where('id', '=', $id)->first();
         $waterConsumed->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'water_consumed'=>'required',
-        ]);
-            return $request->input();
-        }
 }

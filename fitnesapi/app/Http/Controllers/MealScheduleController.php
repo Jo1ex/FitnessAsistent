@@ -21,10 +21,14 @@ class MealScheduleController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'meal' => 'required',
       ]);
+      $mealSchedule= new MealScheudle;
+      $mealSchedule->user_id=$request->user_id;
+      $mealSchedule->meal=$request->meal;
+      $mealSchedule=$mealSchedule->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,12 +40,4 @@ class MealScheduleController extends Controller
         $mealSchedule = MealScheudle::where('id', '=', $id)->first();
         $mealSchedule->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'meal'=>'required',
-
-        ]);
-            return $request->input();
-        }
 }

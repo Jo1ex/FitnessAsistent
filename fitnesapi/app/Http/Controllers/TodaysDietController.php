@@ -21,10 +21,14 @@ class TodaysDietController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'food' => 'required',
       ]);
+      $todaysDiet= new TodaysDiet;
+      $todaysDiet->user_id=$request->user_id;
+      $todaysDiet->food=$request->food;
+      $todaysDiet=$todaysDiet->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class TodaysDietController extends Controller
         $todaysDiet = TodaysDiet::where('id', '=', $id)->first();
         $todaysDiet->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'food'=>'required',
-        ]);
-            return $request->input();
-        }
 }

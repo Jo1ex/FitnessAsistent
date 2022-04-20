@@ -21,10 +21,14 @@ class UserImagesController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'image_link' => 'required',
       ]);
+      $userImages= new UserImages;
+      $userImages->user_id=$request->user_id;
+      $userImages->image_link=$request->image_link;
+      $userImages=$userImages->save();
     }
     public function update(Request $request, $id)
     {
@@ -36,11 +40,4 @@ class UserImagesController extends Controller
         $userImages = UserImages::where('id', '=', $id)->first();
         $userImages->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'image_link'=>'required',
-        ]);
-            return $request->input();
-        }
 }

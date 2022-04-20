@@ -22,10 +22,14 @@ class ExerciseProgresController extends Controller
     }
     public function store(Request $request)
     {
-      $this->validate($request, [
-      'user_id' => 'required|max:5',
+      $request->validate([
+      'user_id' => 'required|integer',
       'exercise_progres' => 'required',
       ]);
+      $exerciseProgres= new ExerciseProgres;
+      $exerciseProgres->user_id=$request->user_id;
+      $exerciseProgres->exercise_progres=$request->exercise_progres;
+      $exerciseProgres=$exerciseProgres->save();  
     }
     public function update(Request $request, $id)
     {
@@ -37,11 +41,4 @@ class ExerciseProgresController extends Controller
         $exerciseProgres = ExerciseProgres::where('id', '=', $id)->first();
         $exerciseProgres->delete();
     }
-    function getData(Request $request)
-        {
-            $request->validate([
-            'exercise_progres'=>'required',
-        ]);
-            return $request->input();
-        }
 }
