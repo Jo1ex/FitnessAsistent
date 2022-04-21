@@ -24,10 +24,18 @@ class FoodController extends Controller
       $request->validate([
       'user_id' => 'required|integer',
       'food' => 'required',
+      'calories' => 'required',
+      'proteins' => 'required',
+      'fats' => 'required',
+      'carbon' => 'required',
       ]);
       $food= new Food;
-      $food->user_id1=$request->user_id1;
+      $food->user_id=$request->user_id;
       $food->food=$request->food;
+      $food->calories=$request->calories;
+      $food->proteins=$request->proteins;
+      $food->fats=$request->fats;
+      $food->carbon=$request->carbon;
       $food=$food->save();
     }
     public function update(Request $request, $id)

@@ -25,10 +25,10 @@ class LastTrainingsController extends Controller
       'user_id' => 'required|integer',
       'last_trainings' => 'required',
       ]);
-      $lastTrainings= new TrainingsPlanning;
-      $lastTrainings->user_id=$request->user_id;
-      $lastTrainings->last_trainings=$request->last_trainings;
-      $lastTrainings=$lastTrainings->save();
+      $LastTrainings= new TrainingsPlanning;
+      $LastTrainings->user_id=$request->user_id;
+      $LastTrainings->last_trainings=$request->last_trainings;
+      $LastTrainings=$LastTrainings->save();
     }
     public function update(Request $request, $id)
     {

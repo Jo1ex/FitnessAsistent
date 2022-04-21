@@ -22,7 +22,7 @@ class StepsController extends Controller
     public function store(Request $request)
     {
       $request->validate([
-      'user_:id' => 'required|integer',
+      'user_id' => 'required|integer',
       'steps' => 'required',
       ]);
       $steps= new Steps;
