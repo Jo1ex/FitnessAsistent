@@ -24,10 +24,12 @@ class PostController extends Controller
       $request->validate([
       'user_id' => 'required|integer',
       'post' => 'required',
+      'caption' => 'required',
       ]);
       $post= new Post;
       $post->user_id=$request->user_id;
       $post->post=$request->post;
+      $post->caption=$request->caption;
       $post=$post->save();
     }
     public function update(Request $request, $id)

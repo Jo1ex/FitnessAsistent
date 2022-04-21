@@ -28,15 +28,13 @@ class UserController extends Controller
       'username' => 'required|max:255',
       'email' => 'required|max:255',
       'password' => 'required',
-      'User_photo' => 'required',
-      'bio' => 'required'
+      'bio' => 'required|max:255'
       ]);
       $user= new User;
       $user->name=$request->name;
       $user->surname=$request->surname;
       $user->email=$request->email;
       $user->password=$request->password;
-      $user->user_photo=$request->user_photo;
       $user->bio=$request->bio;
       $user=$user->save();
     }

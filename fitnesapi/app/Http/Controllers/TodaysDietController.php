@@ -23,11 +23,17 @@ class TodaysDietController extends Controller
     {
       $request->validate([
       'user_id' => 'required|integer',
-      'food' => 'required',
+      'calories' => 'required',
+      'proteins' => 'required',
+      'fats' => 'required',
+      'carbon' => 'required',
       ]);
       $todaysDiet= new TodaysDiet;
       $todaysDiet->user_id=$request->user_id;
-      $todaysDiet->food=$request->food;
+      $todaysDiet->calories=$request->calories;
+      $todaysDiet->proteins=$request->proteins;
+      $todaysDiet->fats=$request->fats;
+      $todaysDiet->carbon=$request->carbon;
       $todaysDiet=$todaysDiet->save();
     }
     public function update(Request $request, $id)
