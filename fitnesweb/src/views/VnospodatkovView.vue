@@ -107,13 +107,14 @@ export default {
 <script>
   export default {
     data: () => ({
-
-      items: ['Zenski', 'Moski'],
+      name: '',
+      email: '',
+      select: null,
       items: [
-        { title: 'Zenski' },
-        { title: 'Moski' },
+        'Zenski',
+        'Moski',
       ],
-
+      checkbox: false,
     }),
   }
 </script>

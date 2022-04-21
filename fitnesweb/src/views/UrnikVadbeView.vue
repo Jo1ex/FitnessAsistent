@@ -142,7 +142,7 @@
                 <v-row class="fill-height">
                     <v-col>
                       
-                      <v-sheet height="820">
+                      <v-sheet height="750">
                         <v-calendar
                           ref="calendar"
                           v-model="focus"
@@ -157,7 +157,11 @@
                       </v-sheet>
                     </v-col>
                   </v-row>
+                  <router-link to="/sestavaurnikavadbe">
+                    <v-icon>mdi-plus-circle</v-icon>
+                  </router-link>
                 </v-card>
+                
               </v-row>
               </v-card>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
