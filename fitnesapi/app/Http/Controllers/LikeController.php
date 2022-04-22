@@ -26,15 +26,18 @@ class LikeController extends Controller
       'post_id' => 'required|integer',
       'like' => 'required',
       ]);
-      $like= new TrainingsPlanning;
+      $like= new Like;
       $like->user_id=$request->user_id;
       $like->post_id=$request->post_id;
       $like=$like->save();
     }
     public function update(Request $request, $id)
     {
-        $like = Like::where('id', '=', $id)->first();
-        $like->update($request->all());
+        $like=Friends::find($id);
+        $like->user_id=$request->user_id;
+        $like->post_id=$request->post_id;
+        $like->like=$request->like;
+        $like=$like->save();
     }
     public function destroy(Request $request, $id)
     {

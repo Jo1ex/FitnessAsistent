@@ -40,8 +40,14 @@ class FoodController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $food = Food::where('id', '=', $id)->first();
-        $food->update($request->all());
+        $Foods=Food::find($id);
+        $Foods->user_id=$request->user_id;
+        $Foods->food=$request->food;
+        $Foods->calories=$request->calories;
+        $Foods->proteins=$request->proteins;
+        $Foods->fats=$request->fats;
+        $Foods->carbon=$request->carbon;
+        $Foods=$Foods->save();
     }
     public function destroy(Request $request, $id)
     {

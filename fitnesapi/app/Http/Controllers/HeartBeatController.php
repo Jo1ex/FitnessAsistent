@@ -32,8 +32,10 @@ class HeartBeatController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $heartBeat = HeartBeat::where('id', '=', $id)->first();
-        $heartBeat->update($request->all());
+        $heartBeat=HeartBeat::find($id);
+        $heartBeat->user_id=$request->user_id;
+        $heartBeat->heart_beat=$request->heart_beat;
+        $heartBeat=$heartBeat->save();
     }
     public function destroy(Request $request, $id)
     {

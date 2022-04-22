@@ -32,8 +32,10 @@ class TrainingsPlanningController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $trainingsPlanning = TrainingsPlanning::where('id', '=', $id)->first();
-        $trainingsPlanning->update($request->all());
+        $trainingsPlanning=Friends::find($id);
+        $trainingsPlanning->user_id=$request->user_id;
+        $trainingsPlanning->exercise_id=$request->exercise_id;
+        $trainingsPlanning=$trainingsPlanning->save();
     }
     public function destroy(Request $request, $id)
     {

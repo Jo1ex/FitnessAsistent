@@ -32,8 +32,10 @@ class ExercisesController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $exercises = Exercises::where('id', '=', $id)->first();
-        $exercises->update($request->all());
+        $exercises=Exercises::find($id);
+        $exercises->user_id=$request->user_id;
+        $exercises->exercise=$request->exercise;
+        $exercises=$exercises->save();
     }
     public function destroy(Request $request, $id)
     {
