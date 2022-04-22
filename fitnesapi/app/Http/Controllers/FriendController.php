@@ -25,10 +25,10 @@ class FriendController extends Controller
       'user_id1' => 'required|integer',
       'user_id2' => 'required|integer',
       ]);
-      $friend= new Friend;
-      $friend->user_id1=$request->user_id1;
-      $friend->user_id2=$request->user_id2;
-      $friend=$friend->save();
+        $Friends=Friends::find($id);
+        $Friends->user_id1=$request->user_id1;
+        $Friends->user_id2=$request->user_id2;
+        $Friends=$Friends->save();
     }
     public function update(Request $request, $id)
     {

@@ -33,8 +33,10 @@ class ExerciseProgresController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $exerciseProgres = ExerciseProgres::where('id', '=', $id)->first();
-        $exerciseProgres->update($request->all());
+        $exerciseProgres=ExerciseProgres::find($id);
+        $exerciseProgres->user_id=$request->user_id;
+        $exerciseProgres->exercise_progres=$request->exercise_progres;
+        $exerciseProgres=$exerciseProgres->save();
     }
     public function destroy(Request $request, $id)
     {

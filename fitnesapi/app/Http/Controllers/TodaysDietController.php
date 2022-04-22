@@ -38,8 +38,13 @@ class TodaysDietController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $todaysDiet = TodaysDiet::where('id', '=', $id)->first();
-        $todaysDiet->update($request->all());
+        $todaysDiet=TodaysDiet::find($id);
+        $todaysDiet->user_id=$request->user_id;
+        $todaysDiet->calories=$request->calories;
+        $todaysDiet->proteins=$request->proteins;
+        $todaysDiet->fats=$request->fats;
+        $todaysDiet->carbon=$request->carbon;
+        $todaysDiet=$todaysDiet->save();
     }
     public function destroy(Request $request, $id)
     {

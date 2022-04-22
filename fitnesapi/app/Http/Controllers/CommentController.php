@@ -34,8 +34,11 @@ class CommentController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $comment = Comment::where('id', '=', $id)->first();
-        $comment->update($request->all());
+        $comment=Comment::find($id);
+        $comment->user_id=$request->user_id;
+        $comment->post_id=$request->post_id;
+        $comment->comment=$request->comment;
+        $comment=$comment->save();
     }
     public function destroy(Request $request, $id)
     {

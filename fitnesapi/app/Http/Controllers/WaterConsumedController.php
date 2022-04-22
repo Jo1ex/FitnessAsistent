@@ -32,8 +32,10 @@ class WaterConsumedController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $waterConsumed = WaterConsumed::where('id', '=', $id)->first();
-        $waterConsumed->update($request->all());
+        $waterConsumed=WaterConsumed::find($id);
+        $waterConsumed->user_id=$request->user_id;
+        $waterConsumed->water_consumed=$request->water_consumed;
+        $waterConsumed=$waterConsumed->save();
     }
     public function destroy(Request $request, $id)
     {

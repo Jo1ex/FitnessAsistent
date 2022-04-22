@@ -32,12 +32,14 @@ class ExerciseScheduleController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $exerciseSchedule = ExerciseSchedule::where('id', '=', $id)->first();
-        $exerciseSchedule->update($request->all());
+        $exerciseSchedule=ExerciseSchedule::find($id);
+        $exerciseSchedule->user_id=$request->user_id;
+        $exerciseSchedule->exerciseSchedule=$request->exerciseSchedule;
+        $exerciseSchedule=$Friends->save();
     }
     public function destroy(Request $request, $id)
     {
-        $exerciseSchedule = ExerciseScheudle::where('id', '=', $id)->first();
+        $exerciseSchedule = ExerciseSchedule::where('id', '=', $id)->first();
         $exerciseSchedule->delete();
     }
 }

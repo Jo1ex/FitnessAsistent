@@ -32,8 +32,10 @@ class UserImagesController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $userImages = UserImages::where('id', '=', $id)->first();
-        $userImages->update($request->all());
+        $userImages=UserImages::find($id);
+        $userImages->user_id=$request->user_id;
+        $userImages->image_link=$request->image_link;
+        $userImages=$Friends->save();
     }
     public function destroy(Request $request, $id)
     {

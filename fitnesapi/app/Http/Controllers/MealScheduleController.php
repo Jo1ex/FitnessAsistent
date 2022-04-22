@@ -25,19 +25,21 @@ class MealScheduleController extends Controller
       'user_id' => 'required|integer',
       'meal' => 'required',
       ]);
-      $mealSchedule= new MealScheudle;
+      $mealSchedule= new MealSchedule;
       $mealSchedule->user_id=$request->user_id;
       $mealSchedule->meal=$request->meal;
       $mealSchedule=$mealSchedule->save();
     }
     public function update(Request $request, $id)
     {
-        $mealSchedule = MealSchedule::where('id', '=', $id)->first();
-        $mealSchedule->update($request->all());
+        $mealSchedule=MealSchedule::find($id);
+        $mealSchedule->user_id=$request->user_id;
+        $mealSchedule->meal=$request->meal;
+        $mealSchedule=$mealSchedule->save();
     }
     public function destroy(Request $request, $id)
     {
-        $mealSchedule = MealScheudle::where('id', '=', $id)->first();
+        $mealSchedule = MealSchedule::where('id', '=', $id)->first();
         $mealSchedule->delete();
     }
 }

@@ -32,8 +32,10 @@ class StepsController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $steps = Steps::where('id', '=', $id)->first();
-        $steps->update($request->all());
+        $steps=Steps::find($id);
+        $steps->user_id=$request->user_id;
+        $steps->steps=$request->steps;
+        $steps=$steps->save();
     }
     public function destroy(Request $request, $id)
     {
