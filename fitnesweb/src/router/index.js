@@ -73,6 +73,11 @@ const routes = [
     name: 'sestavaurnikavadbe',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/SestavaurnikavadbeView.vue')
   },
+  {
+    path: '/sestavaurnikaprehrane',
+    name: 'sestavaurnikaprehrane',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/SestavaurnikaprehraneView.vue')
+  },
 ]
 
 const router = new VueRouter({

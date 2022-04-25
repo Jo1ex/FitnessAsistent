@@ -71,7 +71,7 @@
                 height="500"
                 >
                 <v-row>
-                  <v-card-title>VAJA</v-card-title>
+                  <v-card-title>ZAJTRK</v-card-title>
                   <v-col 
                   align="center" 
                   class="d-flex"
@@ -86,19 +86,34 @@
                       clearable
                       deletable-chips
                       :items="items"
-                      prepend-title="Vaja"
-                      label="Izberite vaje"
+                      prepend-title="Hrana"
+                      label="Izberite hrano"
                       class="my-8"
                     ></v-select>
                   </v-col>
                 </v-row>
-                </v-card>
-                <v-card
-                class="mx-7 my-12"
-                color="#D2D2D2"
-                light
-                width="700"
-                height="500">
+                <v-row>
+                  <v-card-title>KOSILO</v-card-title>
+                  <v-col 
+                  align="center" 
+                  class="d-flex"
+                  cols="8"
+                  sm="6"
+                  >         
+                    <v-select
+                      attach
+                      solo
+                      chips
+                      multiple
+                      clearable
+                      deletable-chips
+                      :items="items"
+                      prepend-title="Hrana"
+                      label="Izberite hrano"
+                      class="my-8"
+                    ></v-select>
+                  </v-col>
+                </v-row>
                 <v-row>
                   <v-card-title>URA</v-card-title>
                   <v-col 
@@ -116,7 +131,7 @@
                       clearable
                       deletable-chips
                       :items="odu"
-                      prepend-title="Vaja"
+                      prepend-title="Hrana"
                       label="OD"
                     ></v-select>
                     
@@ -135,58 +150,65 @@
                       clearable
                       deletable-chips
                       :items="dou"
-                      prepend-title="Vaja"
+                      prepend-title="Hrana"
                       label="DO"
                       class="my-8"
                     ></v-select>
                     
                   </v-col>
                   </v-row>
-                  
-                  <v-row >
-                    <v-card-title>DATUM</v-card-title>
+                </v-card>
+                <v-card
+                class="mx-7 my-12"
+                color="#D2D2D2"
+                light
+                width="700"
+                height="500">
+                <v-row>
+                  <v-card-title>VECERJA</v-card-title>
                   <v-col 
                   align="center" 
                   class="d-flex"
                   cols="8"
-                  sm="3"
-                  >       
-                    
-                      
+                  sm="6"
+                  >         
                     <v-select
                       attach
                       solo
+                      chips
+                      multiple
                       clearable
                       deletable-chips
-                      :items="odd"
-                      prepend-title="Vaja"
-                      label="OD"
+                      :items="items"
+                      prepend-title="Hrana"
+                      label="Izberite hrano"
                       class="my-8"
                     ></v-select>
-                    
                   </v-col>
+                </v-row>
                   
+                  <v-row>
+                  <v-card-title>PRIGRIZKI</v-card-title>
                   <v-col 
                   align="center" 
                   class="d-flex"
                   cols="8"
-                  sm="4"
-                  >       
-                    
-                      
+                  sm="6"
+                  >         
                     <v-select
                       attach
                       solo
+                      chips
+                      multiple
                       clearable
                       deletable-chips
-                      :items="dod"
-                      prepend-title="Vaja"
-                      label="DO"
+                      :items="items"
+                      prepend-title="Hrana"
+                      label="Izberite hrano"
                       class="my-8"
                     ></v-select>
-                    
                   </v-col>
-                  </v-row>
+                </v-row>
 
                 </v-card>
               </v-row>
@@ -224,22 +246,22 @@ export default {
       email: '',
       select: null,
       items: [
-        'Vaja1',
-        'Vaja2',
-        'Vaja3',
-        'Vaja4',
-        'Vaja5',
-        'Vaja6',
-        'Vaja7',
-        'Vaja8',
-        'Vaja9',
-        'Vaja10',
-        'Vaja11',
-        'Vaja12',
-        'Vaja13',
-        'Vaja14',
-        'Vaja15',
-        'Vaja16',
+        'Hrana1',
+        'Hrana2',
+        'Hrana3',
+        'Hrana4',
+        'Hrana5',
+        'Hrana6',
+        'Hrana7',
+        'Hrana8',
+        'Hrana9',
+        'Hrana10',
+        'Hrana11',
+        'Hrana12',
+        'Hrana13',
+        'Hrana14',
+        'Hrana15',
+        'Hrana16',
       ],
       odu: [
         '00',

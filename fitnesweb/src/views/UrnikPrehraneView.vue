@@ -48,7 +48,7 @@
               light
               max-width="1000"
               width="1000"
-              height="850"
+              height="800"
             >
             
               <v-row>
@@ -58,7 +58,7 @@
                 light 
                 width="570"
                 elevation="5"
-                height="820"
+                height="750"
                 >
                   <div>
                    <v-sheet height="70">
@@ -186,7 +186,7 @@
                 <v-row class="fill-height">
                     <v-col>
                       
-                      <v-sheet height="820">
+                      <v-sheet height="650">
                         <v-calendar
                           ref="calendar"
                           v-model="focus"
@@ -201,6 +201,9 @@
                       </v-sheet>
                     </v-col>
                   </v-row>
+                  <router-link to="/sestavaurnikaprehrane">
+                    <v-icon color=#2C6763 size=70>mdi-plus-circle</v-icon>
+                  </router-link>
                 </v-card>
               </v-row>
               </v-card>
@@ -215,7 +218,7 @@
               light
               max-width="600"
               width="600"
-              height="850"
+              height="800"
               >
                 <v-expansion-panels rounded class="mt-3">
                   <v-expansion-panel
