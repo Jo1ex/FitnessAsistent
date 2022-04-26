@@ -127,3 +127,9 @@ Route::apiResource('user-images', UserImagesController::class);
 Route::apiResource('users', UserController::class);
 
 Route::apiResource('water-consumeds', WaterConsumedController::class);
+
+
+//Users
+Route::prefix("user")->group( function() {
+    Route::post("/login", "api\LoginController@login");
+});
