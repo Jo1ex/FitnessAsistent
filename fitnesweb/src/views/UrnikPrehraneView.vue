@@ -6,7 +6,7 @@
     dark
     >
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
+      <router-link to="/listasporocil">
         <v-icon>mdi-send-outline</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -78,6 +78,16 @@ const routes = [
     name: 'sestavaurnikaprehrane',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/SestavaurnikaprehraneView.vue')
   },
+  {
+    path: '/listasporocil',
+    name: 'listasporocil',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/ListaSporocilView.vue')
+  },
+  {
+    path: '/sporocilo',
+    name: 'sporocilo',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/SporocilaView.vue')
+  },
 ]
 
 const router = new VueRouter({
