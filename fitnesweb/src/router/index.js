@@ -88,6 +88,11 @@ const routes = [
     name: 'sporocilo',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/SporocilaView.vue')
   },
+  {
+    path: '/komentarji',
+    name: 'kometnarji',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/KomentarjiView.vue')
+  },
 ]
 
 const router = new VueRouter({

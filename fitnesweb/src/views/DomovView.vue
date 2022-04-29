@@ -95,11 +95,9 @@
               <span class="subheading mr-2">561</span>
               
               <span class="mr-2">·</span>
-              <v-btn icon>
-              <v-icon class="mr-1" size="35">
-                mdi-chat
-              </v-icon>
-              </v-btn>
+              <router-link to="/komentarji">
+                <v-icon class="mr-1" size="35">mdi-chat</v-icon>
+              </router-link>
               <span class="subheading mr-2">65</span>
               
               <span class="mr-1">·</span>
@@ -147,23 +145,32 @@
               align="center"
               justify="start"
             >
-              <v-icon class="mr-1">
+              <v-btn icon>
+              <v-icon class="mr-1" size="35">
                 mdi-heart
               </v-icon>
+              </v-btn>
               <span class="subheading mr-2">561</span>
               
               <span class="mr-2">·</span>
-              <v-icon class="mr-1">
-                mdi-chat
-              </v-icon>
+              <router-link to="/komentarji">
+                <v-icon class="mr-1" size="35">mdi-chat</v-icon>
+              </router-link>
               <span class="subheading mr-2">65</span>
               
               <span class="mr-1">·</span>
-              <v-icon class="mr-1">
+              <v-btn icon>
+              <v-icon class="mr-1" size="35">
                 mdi-link-variant
               </v-icon>
-              <span class="subheading">93</span>
-              
+              </v-btn>
+              <span class="subheading mr-15">93</span>
+              <v-spacer></v-spacer>
+              <v-btn icon>
+              <v-icon class="mr-1" size="35">
+                mdi-bookmark
+              </v-icon>
+              </v-btn>
             </v-row>
           </v-list-item>
         </v-card-actions>
@@ -197,23 +204,32 @@
               align="center"
               justify="start"
             >
-              <v-icon class="mr-1">
+              <v-btn icon>
+              <v-icon class="mr-1" size="35">
                 mdi-heart
               </v-icon>
+              </v-btn>
               <span class="subheading mr-2">561</span>
               
               <span class="mr-2">·</span>
-              <v-icon class="mr-1">
-                mdi-chat
-              </v-icon>
+              <router-link to="/komentarji">
+                <v-icon class="mr-1" size="35">mdi-chat</v-icon>
+              </router-link>
               <span class="subheading mr-2">65</span>
               
               <span class="mr-1">·</span>
-              <v-icon class="mr-1">
+              <v-btn icon>
+              <v-icon class="mr-1" size="35">
                 mdi-link-variant
               </v-icon>
-              <span class="subheading">93</span>
-              
+              </v-btn>
+              <span class="subheading mr-15">93</span>
+              <v-spacer></v-spacer>
+              <v-btn icon>
+              <v-icon class="mr-1" size="35">
+                mdi-bookmark
+              </v-icon>
+              </v-btn>
             </v-row>
           </v-list-item>
         </v-card-actions>
