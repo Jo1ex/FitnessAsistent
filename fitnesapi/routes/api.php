@@ -75,6 +75,8 @@ use App\Http\Controllers\WaterConsumedController;
 
 use App\Http\Controllers\UserController;
 
+use App\Http\Controllers\LoginController;
+
 
 
 /*
@@ -130,6 +132,7 @@ Route::apiResource('water-consumeds', WaterConsumedController::class);
 
 
 //Users
-Route::prefix("user")->group( function() {
-    Route::post("/login", "api\LoginController@login");
+Route::prefix("/users")->group( function() {
+    Route::post("/login", [LoginController::class, "login"]);
+    Route::middleware("auth_api")->get("/all","api\users\UserController@index");
 });
