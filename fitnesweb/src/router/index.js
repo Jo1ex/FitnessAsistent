@@ -93,6 +93,16 @@ const routes = [
     name: 'kometnarji',
     component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/KomentarjiView.vue')
   },
+  {
+    path: '/deljenje',
+    name: 'deljenje',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/DeljenjeView.vue')
+  },
+  {
+    path: '/statusaktivnosti',
+    name: 'statusaktivnosti',
+    component: () => import(/* webpackChunkName: "menjavagesla" */ '../views/StatusAktivnostiView.vue')
+  },
 ]
 
 const router = new VueRouter({
