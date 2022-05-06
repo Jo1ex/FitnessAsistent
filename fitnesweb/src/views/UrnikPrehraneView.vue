@@ -32,7 +32,7 @@
         <v-icon>mdi-calendar</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
+      <router-link to="/urnikprehrane">
         <v-icon>mdi-format-align-justify</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
