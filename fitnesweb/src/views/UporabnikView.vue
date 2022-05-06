@@ -17,13 +17,10 @@
       <router-link to="/urnikvadbe">
         <v-icon>mdi-plus-box-outline</v-icon>
       </router-link>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
-        <v-icon>mdi-flag-outline</v-icon>
-      </router-link>
       <v-spacer></v-spacer>
       
       <v-text-field
+            class="mt-6"
             placeholder="Search:"
             solo
             rounded
@@ -44,7 +41,7 @@
         <v-icon>mdi-calendar</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
+      <router-link to="/urnikprehrane">
         <v-icon>mdi-format-align-justify</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -79,7 +76,9 @@
                 Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
               </v-card-text>
               <v-row justify="center" class="fill-height ma-4 mr-3" >
+                <router-link to="/sporocilo">
                 <v-btn width="150" height="30" color="#2C6763" dark>SPOROCILO</v-btn>
+                </router-link>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <v-btn width="150" height="30" color="#2C6763" dark>DODAJ</v-btn>
               </v-row>
@@ -120,6 +119,7 @@
         </v-row>
       </v-container>
   </v-app>
+  
 </template>
 
 <script>
