@@ -25,7 +25,7 @@
       
       <v-text-field
             placeholder="Search:"
-            class="d-flex"
+            class="d-flex mt-6"
             solo
             rounded
             dense
@@ -45,7 +45,7 @@
         <v-icon>mdi-calendar</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
+      <router-link to="/urnikprehrane">
         <v-icon>mdi-format-align-justify</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -59,6 +59,7 @@
          max-width="1200"
          width="1200"
         >
+        <post-item></post-item>
         <v-card class="ma-5 mb-7" 
         rounded 
         elevation=5 
@@ -171,7 +172,9 @@
 </template>
 
 <script>
+import PostItem from '../components/PostItem.vue';
 export default {
+  components: { PostItem },
   data: () => ({
     step: 1
   }),
