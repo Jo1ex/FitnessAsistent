@@ -17,13 +17,10 @@
       <router-link to="/urnikvadbe">
         <v-icon>mdi-plus-box-outline</v-icon>
       </router-link>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
-        <v-icon>mdi-flag-outline</v-icon>
-      </router-link>
       <v-spacer></v-spacer>
       
       <v-text-field
+            class="mt-6"
             placeholder="Search:"
             solo
             rounded
@@ -44,7 +41,7 @@
         <v-icon>mdi-calendar</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
+      <router-link to="/urnikprehrane">
         <v-icon>mdi-format-align-justify</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
