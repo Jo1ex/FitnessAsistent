@@ -17,15 +17,12 @@
       <router-link to="/urnikvadbe">
         <v-icon>mdi-plus-box-outline</v-icon>
       </router-link>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
-        <v-icon>mdi-flag-outline</v-icon>
-      </router-link>
       <v-spacer></v-spacer>
       
       <v-text-field
+            
             placeholder="Search:"
-            class="d-flex"
+            class="d-flex mt-6"
             solo
             rounded
             dense
@@ -45,7 +42,7 @@
         <v-icon>mdi-calendar</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <router-link to="/urnikvadbe">
+      <router-link to="/urnikprehrane">
         <v-icon>mdi-format-align-justify</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -65,7 +62,7 @@
         color=#DEDEDE
         >
         <v-card-title>
-          <v-list-item-avatar color="grey darken-3">
+          <v-list-item-avatar color="red darken-3">
             <v-icon dark>mdi-account</v-icon> 
             </v-list-item-avatar>
 
@@ -81,7 +78,7 @@
       
       
         <v-card-title>
-          <v-list-item-avatar color="grey darken-3">
+          <v-list-item-avatar color="blue darken-3">
             <v-icon dark>mdi-account</v-icon> 
             </v-list-item-avatar>
 
@@ -95,7 +92,7 @@
           "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
         </v-card-text>
         <v-card-title>
-          <v-list-item-avatar color="grey darken-3">
+          <v-list-item-avatar color="red darken-3">
             <v-icon dark>mdi-account</v-icon> 
             </v-list-item-avatar>
 
@@ -111,7 +108,7 @@
       
       
         <v-card-title>
-          <v-list-item-avatar color="grey darken-3">
+          <v-list-item-avatar color="blue darken-3">
             <v-icon dark>mdi-account</v-icon> 
             </v-list-item-avatar>
 
@@ -125,7 +122,7 @@
           "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well. Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
         </v-card-text>
         <v-card-title>
-          <v-list-item-avatar color="grey darken-3">
+          <v-list-item-avatar color="red darken-3">
             <v-icon dark>mdi-account</v-icon> 
             </v-list-item-avatar>
 
