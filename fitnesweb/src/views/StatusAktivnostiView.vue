@@ -131,11 +131,32 @@
           class="ma-2"
           color=white
           light
-          max-width="1700"
+          max-width="510"
           width="510"
           height="270"
-          align=center
           >
+          <div class="text-h3 font-weight-bold ml-1">
+          NAREJENI KORAKI  &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <v-row class="mt-10 ml-5">
+        <v-icon 
+        size="100"
+        align=start
+        >mdi-shoe-print
+        </v-icon>
+          <div class="text-h3 font-weight-black">
+          &nbsp;&nbsp;&nbsp;&nbsp;7000/10000
+          <v-progress-linear
+              class="mt-3"
+              background-color="#F7F8F8"
+              height=15
+              width=50
+              rounded
+              v-model="valueDeterminate"
+              color="#2C6763"
+              ></v-progress-linear>
+        </div>
+        </v-row>
           </v-card>
       </v-card>
       <v-card
@@ -154,8 +175,17 @@
           max-width="1700"
           width="510"
           height="190"
-          align=center
           >
+          <div class="text-h3 font-weight-bold ml-4" align=start>
+          CAS SPANJA  &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <v-card-text
+            class="text-h4 font-weight-medium"
+            color="#00A99D"
+            align=start>
+          8h 20m
+          <v-icon size=100 class="ml-15" color="#00A99D">mdi-sleep</v-icon>
+          </v-card-text>
           </v-card>
           <v-card
           class="ma-2"
@@ -166,6 +196,15 @@
           height="190"
           align=center
           >
+          <v-progress-circular
+          :rotate="90"
+          :size="100"
+          :width="15"
+          :value="value"
+          color="red"
+        >
+          230 kCal LEFT
+        </v-progress-circular>
           </v-card>
           <v-card
           class="ma-2"
