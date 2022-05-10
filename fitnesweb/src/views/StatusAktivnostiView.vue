@@ -23,7 +23,6 @@
 
       <v-spacer></v-spacer>
 
-
       <router-link to="/statusaktivnosti">
         <v-icon>mdi-account-circle</v-icon>
       </router-link>
@@ -41,12 +40,12 @@
                 
       <v-card
          class="mx-auto mt-2 align-center"
+
          color="#ECECEC"
          light
          max-width="1700"
          width="1700"
-         height="850"
-         
+         height="850" 
         >
         <v-row>
         <v-card
@@ -78,7 +77,7 @@
           ></span>
           <strong v-if="avg">BPM</strong>
         </div>
-      
+    
 
       <v-spacer></v-spacer>
 
@@ -107,24 +106,26 @@
           </v-card>
       </v-card>
       <v-card
+
          class="mx-7 my-auto align-center"
          color="#EFEFEF"
          light
          max-width="1700"
          width="530"
          height="800"
-        >
+         >
+
         <v-card
           class="ma-2 align-center"
           color=white
           light
           max-width="1700"
           width="510"
-          height="500"
           >
           </v-card>
           <v-card
           class="ma-2 align-center"
+
           color=white
           light
           max-width="510"
@@ -133,12 +134,11 @@
           >
           <div class="text-h3 font-weight-bold ml-1">
           NAREJENI KORAKI  &nbsp;&nbsp;&nbsp;&nbsp;
-        </div>
+          </div>
         <v-row class="mt-10 ml-5">
         <v-icon 
         class="align-center"
         size="100"
-        
         >mdi-shoe-print
         </v-icon>
           <div class="text-h3 font-weight-black">
@@ -163,13 +163,11 @@
          max-width="1700"
          width="530"
          height="800"
-         
         >
         <v-card
           class="ma-2 align-start"
           color=white
           light
-
           max-width="510"
           width="510"
           height="190"
@@ -179,12 +177,12 @@
           CAS SPANJA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <v-card-text
+
             class="text-h4 font-weight-medium align-center"
             color="#00A99D"
             >
 
           8h 20m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
           <v-icon size=100 class="ml-15" color="#00A99D">mdi-sleep</v-icon>
           </v-card-text>
           </v-card>
@@ -192,20 +190,18 @@
           class="ma-2 align-center"
           color=white
           light
-
           max-width="510"
           width="510"
           height="190"
-          
           >
-
-          
           <div class="text-h3 font-weight-bold align-start" >
+
           KALORIJE  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <v-row>
             <v-col>
           <v-card-text
+
             class="text-h4 font-weight-mediu align-startm"
             color="#00A99D"
             >
@@ -222,6 +218,7 @@
           </v-row>
         
 
+
           <v-progress-circular
           :rotate="90"
           :size="100"
@@ -235,12 +232,12 @@
           </v-card>
           <v-card
           class="ma-2 align-center"
+
           color=white
           light
           max-width="1700"
           width="510"
           height="380"
-          
           >
           </v-card>
       </v-card>

@@ -33,7 +33,7 @@
 
       <v-spacer></v-spacer>
 
-      <router-link to="/urnikvadbe">
+      <router-link to="/statusaktivnosti">
         <v-icon>mdi-account-circle</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

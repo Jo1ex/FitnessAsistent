@@ -24,7 +24,7 @@
 
       <v-spacer></v-spacer>
 
-      <router-link to="/urnikvadbe">
+      <router-link to="/statusaktivnosti">
         <v-icon>mdi-account-circle</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -39,7 +39,7 @@
     </v-toolbar>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
-          <v-col cols="30" sm="30" md="30">
+          <v-col cols="30" sm="8" md="30">
             
           <v-row>
             <v-card
