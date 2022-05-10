@@ -23,7 +23,8 @@
 
       <v-spacer></v-spacer>
 
-      <router-link to="/urnikvadbe">
+
+      <router-link to="/statusaktivnosti">
         <v-icon>mdi-account-circle</v-icon>
       </router-link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -39,32 +40,30 @@
     <v-container class="fill-height" fluid>
                 
       <v-card
-         class="mx-auto mt-2"
+         class="mx-auto mt-2 align-center"
          color="#ECECEC"
          light
          max-width="1700"
          width="1700"
          height="850"
-         align=center
+         
         >
         <v-row>
         <v-card
-         class="ml-9 my-auto"
+         class="ml-9 my-auto align-center"
          color="#EFEFEF"
          light
          max-width="1700"
          width="530"
          height="800"
-         align=center
         >
           <v-card
-          class="ma-2"
+          class="ma-2 align-center"
           color=white
           light
           max-width="510"
           width="510"
           height="390"
-          align=center
           >
           <v-card-title>
       
@@ -98,37 +97,34 @@
     </v-sheet>
           </v-card>
           <v-card
-          class="ma-2"
+          class="ma-2 align-center"
           color=white
           light
           max-width="1700"
           width="510"
           height="380"
-          align=center
           >
           </v-card>
       </v-card>
       <v-card
-         class="mx-7 my-auto"
+         class="mx-7 my-auto align-center"
          color="#EFEFEF"
          light
          max-width="1700"
          width="530"
          height="800"
-         align=center
         >
         <v-card
-          class="ma-2"
+          class="ma-2 align-center"
           color=white
           light
           max-width="1700"
           width="510"
           height="500"
-          align=center
           >
           </v-card>
           <v-card
-          class="ma-2"
+          class="ma-2 align-center"
           color=white
           light
           max-width="510"
@@ -140,8 +136,9 @@
         </div>
         <v-row class="mt-10 ml-5">
         <v-icon 
+        class="align-center"
         size="100"
-        align=start
+        
         >mdi-shoe-print
         </v-icon>
           <div class="text-h3 font-weight-black">
@@ -160,42 +157,71 @@
           </v-card>
       </v-card>
       <v-card
-         class="mr-9 my-9"
+         class="mr-9 my-9 align-center"
          color="#EFEFEF"
          light
          max-width="1700"
          width="530"
          height="800"
-         align=center
+         
         >
         <v-card
-          class="ma-2"
+          class="ma-2 align-start"
           color=white
           light
-          max-width="1700"
+
+          max-width="510"
           width="510"
           height="190"
+          
           >
-          <div class="text-h3 font-weight-bold ml-4" align=start>
-          CAS SPANJA  &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="text-h3 font-weight-bold " >
+          CAS SPANJA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <v-card-text
-            class="text-h4 font-weight-medium"
+            class="text-h4 font-weight-medium align-center"
             color="#00A99D"
-            align=start>
-          8h 20m
+            >
+
+          8h 20m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
           <v-icon size=100 class="ml-15" color="#00A99D">mdi-sleep</v-icon>
           </v-card-text>
           </v-card>
           <v-card
-          class="ma-2"
+          class="ma-2 align-center"
           color=white
           light
-          max-width="1700"
+
+          max-width="510"
           width="510"
           height="190"
-          align=center
+          
           >
+
+          
+          <div class="text-h3 font-weight-bold align-start" >
+          KALORIJE  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <v-row>
+            <v-col>
+          <v-card-text
+            class="text-h4 font-weight-mediu align-startm"
+            color="#00A99D"
+            >
+          760kCal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </v-card-text>
+            </v-col>
+        <v-col>
+          <v-progress-circular 
+            :value="80"
+            :size="110"
+            :width="10"
+            color="teal">240kCal left</v-progress-circular>
+        </v-col>
+          </v-row>
+        
+
           <v-progress-circular
           :rotate="90"
           :size="100"
@@ -205,15 +231,16 @@
         >
           230 kCal LEFT
         </v-progress-circular>
+
           </v-card>
           <v-card
-          class="ma-2"
+          class="ma-2 align-center"
           color=white
           light
           max-width="1700"
           width="510"
           height="380"
-          align=center
+          
           >
           </v-card>
       </v-card>
