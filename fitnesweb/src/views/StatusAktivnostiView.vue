@@ -105,8 +105,7 @@
           >
           </v-card>
       </v-card>
-      <v-card
-
+        <v-card
          class="mx-7 my-auto align-center"
          color="#EFEFEF"
          light
@@ -115,14 +114,110 @@
          height="800"
          >
 
-        <v-card
-          class="ma-2 align-center"
+          <v-card
+          class="ma-2 "
           color=white
           light
           max-width="1700"
           width="510"
+          height="500"
+
           >
+            <div class="text-h3 font-weight-bold ml-5 mt-2">
+          ZADNJI TRENING  
+          </div>
+            <v-card
+            class="my-10 mx-4"
+              width="480"
+              height="100"
+              color="#EFEFEF"
+              >
+              <v-row
+                align=start>
+                <v-avatar
+                  color="#2C6763"
+                  size="56"
+                  class="my-5 ml-8 mr-4"
+                ></v-avatar>
+              <v-col class="mr-3">
+                  <div class="font-weight-bold" >
+                    Vaja za celotno telo
+                  </div>
+                  <div color=#616161 class="mt-2">
+                    180 Porabljenih kalorij | 20minut
+                  </div>
+                  <v-progress-linear 
+                    rounded
+                    class="mt-2"
+                    value="25"
+                    height=10
+                    color="#2C6763">
+                  </v-progress-linear>
+              </v-col>
+              </v-row>
+            </v-card>
+            <v-card
+            class="my-10 mx-4"
+              width="480"
+              height="100"
+              color="#EFEFEF"
+              >
+              <v-row
+                align=start>
+                <v-avatar
+                  color="#2C6763"
+                  size="56"
+                  class="my-5 ml-8 mr-4"
+                ></v-avatar>
+              <v-col class="mr-3">
+                  <div class="font-weight-bold" >
+                    Vaja za spodnji del telesa
+                  </div>
+                  <div color=#616161 class="mt-2">
+                    200 Porabljenih kalorij | 30minut
+                  </div>
+                  <v-progress-linear 
+                    rounded
+                    class="mt-2"
+                    value="60"
+                    height=10
+                    color="#2C6763">
+                  </v-progress-linear>
+              </v-col>
+              </v-row>
+            </v-card>
+            <v-card
+              class="my-10 mx-4"
+              width="480"
+              height="100"
+              color="#EFEFEF"
+              >
+              <v-row
+                align=start>
+                <v-avatar
+                  color="#2C6763"
+                  size="56"
+                  class="my-5 ml-8 mr-4"
+                ></v-avatar>
+              <v-col class="mr-3">
+                  <div class="font-weight-bold" >
+                    Vaja za tebušne mišice
+                  </div>
+                  <div color=#616161 class="mt-2">
+                    180 Porabljenih kalorij | 20minut                  
+                  </div>
+                  <v-progress-linear 
+                    rounded
+                    class="mt-2"
+                    value="40"
+                    height=10
+                    color="#2C6763">
+                  </v-progress-linear>
+              </v-col>
+              </v-row>
+            </v-card>
           </v-card>
+        
           <v-card
           class="ma-2 align-center"
 
@@ -132,7 +227,7 @@
           width="510"
           height="270"
           >
-          <div class="text-h3 font-weight-bold ml-1">
+          <div class="text-h3 font-weight-bold ml-5">
           NAREJENI KORAKI  &nbsp;&nbsp;&nbsp;&nbsp;
           </div>
         <v-row class="mt-10 ml-5">
@@ -143,15 +238,13 @@
         </v-icon>
           <div class="text-h3 font-weight-black">
           &nbsp;&nbsp;&nbsp;&nbsp;7000/10000
-          <v-progress-linear
-              class="mt-3"
-              background-color="#F7F8F8"
-              height=15
-              width=50
-              rounded
-              v-model="valueDeterminate"
-              color="#2C6763"
-              ></v-progress-linear>
+          <v-progress-linear 
+                    rounded
+                    class="mt-2"
+                    value="70"
+                    height=15
+                    color="#2C6763">
+                  </v-progress-linear>
         </div>
         </v-row>
           </v-card>
@@ -173,19 +266,18 @@
           height="190"
           
           >
-          <div class="text-h3 font-weight-bold " >
+          <div class="text-h3 font-weight-bold ml-5" >
           CAS SPANJA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <v-card-text
-
-            class="text-h4 font-weight-medium align-center"
+            class="text-h4 font-weight-medium align-center ml-5"
             color="#00A99D"
             >
-
-          8h 20m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          8h 20m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <v-icon size=100 class="ml-15" color="#00A99D">mdi-sleep</v-icon>
           </v-card-text>
           </v-card>
+
           <v-card
           class="ma-2 align-center"
           color=white
@@ -194,54 +286,43 @@
           width="510"
           height="190"
           >
-          <div class="text-h3 font-weight-bold align-start" >
 
-          KALORIJE  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="text-h3 font-weight-bold align-start ml-5" >
+            KALORIJE  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
+          
           <v-row>
             <v-col>
-          <v-card-text
-
-            class="text-h4 font-weight-mediu align-startm"
-            color="#00A99D"
-            >
-          760kCal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </v-card-text>
+              <v-card-text
+              class="text-h4 font-weight-medium align-center ml-5"
+              color="#00A99D"
+              >
+              760kCal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </v-card-text>
             </v-col>
-        <v-col>
-          <v-progress-circular 
-            :value="80"
-            :size="110"
-            :width="10"
-            color="teal">240kCal left</v-progress-circular>
-        </v-col>
-          </v-row>
-        
-
-
-          <v-progress-circular
-          :rotate="90"
-          :size="100"
-          :width="15"
-          :value="value"
-          color="red"
-        >
-          230 kCal LEFT
-        </v-progress-circular>
-
+            <v-col>
+              <v-progress-circular 
+                :value="80"
+                :size="110"
+                :width="10"
+                color="teal"
+                >240kCal left</v-progress-circular>
+              </v-col>
+            </v-row>
           </v-card>
+          
           <v-card
           class="ma-2 align-center"
-
           color=white
           light
           max-width="1700"
           width="510"
           height="380"
           >
+            
           </v-card>
+      
       </v-card>
-
       </v-row>
       </v-card>
                     
@@ -251,7 +332,6 @@
 
 <script>
 export default {
-
   data: () => ({
     step: 1
   }),
@@ -259,6 +339,7 @@ export default {
     source: String
   }
 };
+
 </script>
 <script>
   const exhale = ms =>
@@ -301,3 +382,4 @@ export default {
     },
   }
 </script>
+
