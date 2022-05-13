@@ -37,8 +37,6 @@
 .container{
   background-image: url('../slike/slika.png');
   background-size: cover;
-
-
 }
 nav {
   padding: 25px;
@@ -53,9 +51,6 @@ nav {
     }
   }
 }
-
-
-
 </style>
 
 

@@ -39,7 +39,7 @@
     </v-toolbar>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
-          <v-col cols="30" sm="8" md="30">
+          <v-col cols="30" sm="30" md="30">
             
           <v-row>
             <v-card

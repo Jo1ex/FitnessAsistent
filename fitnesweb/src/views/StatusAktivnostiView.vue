@@ -68,7 +68,7 @@
       
       
         <div class="text-h3 font-weight-bold">
-          SRCNI UTRIP  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Srcni utrip  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
         <div>
           <span
@@ -83,7 +83,7 @@
 
     </v-card-title>
 
-    <v-sheet color="transparent">
+    <v-sheet color="transparent" class="mt-16">
       <v-sparkline
         :key="String(avg)"
         :smooth="0"
@@ -103,6 +103,20 @@
           width="510"
           height="380"
           >
+          <div class="text-h3 font-weight-bold ml-5 mt-2">
+          Napredek vadbe 
+          </div>
+          <v-sheet color="transparent" class="mt-16">
+      <v-sparkline
+        :key="String(avg)"
+        :smooth="30"
+        :gradient="['#009999', '#2C6763']"
+        :line-width="3"
+        :value="heartbeats"
+        auto-draw
+        stroke-linecap="round"
+      ></v-sparkline>
+    </v-sheet>
           </v-card>
       </v-card>
         <v-card
@@ -124,7 +138,7 @@
 
           >
             <div class="text-h3 font-weight-bold ml-5 mt-2">
-          ZADNJI TRENING  
+          Zadnji trening  
           </div>
             <v-card
             class="my-10 mx-4"
@@ -228,7 +242,7 @@
           height="270"
           >
           <div class="text-h3 font-weight-bold ml-5">
-          NAREJENI KORAKI  &nbsp;&nbsp;&nbsp;&nbsp;
+          Narejeni koraki  &nbsp;&nbsp;&nbsp;&nbsp;
           </div>
         <v-row class="mt-10 ml-5">
         <v-icon 
@@ -267,7 +281,7 @@
           
           >
           <div class="text-h3 font-weight-bold ml-5" >
-          CAS SPANJA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Cas spanja &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <v-card-text
             class="text-h4 font-weight-medium align-center ml-5"
@@ -288,7 +302,7 @@
           >
 
           <div class="text-h3 font-weight-bold align-start ml-5" >
-            KALORIJE  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Kalorije  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           
           <v-row>
@@ -319,7 +333,32 @@
           width="510"
           height="380"
           >
-            
+            <div class="text-h3 font-weight-bold ml-5" >
+          Konzumirana voda 
+          </div>
+          <v-card-text
+            class="text-h4 font-weight-medium align-center ml-5"
+            color="#00A99D"
+            >
+          4 LITRE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </v-card-text>
+          <div>
+            Posodobitev v realnem času
+6H - 8H 
+700ML
+
+9H - 11H
+550ML
+
+11H - 14H
+1000ML
+
+14H - 16H
+700ML
+
+16H - ZDAJ
+600ML
+          </div>
           </v-card>
       
       </v-card>
