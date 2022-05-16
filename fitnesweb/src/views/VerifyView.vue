@@ -10,7 +10,7 @@
                     <v-col cols="12" md="8">
                       <v-card-text class="mt-12">
                         <h1
-                          color=#00A99D class="text-center display-2 teal--text text--accent-3">Verifikacija emaila</h1>
+                          class="text-center display-2" >Verifikacija e-maila</h1>
                         
                         <h4 class="text-center mt-15">Prosim preverite svoj email: mojmail@gmail.com za vašo verifikacijsko kodo, in jo vpišite odspodaj, da potrdite vaš email naslov.</h4>
                         <v-form>
@@ -20,7 +20,7 @@
                             type="text"
                             color="teal accent-2"
                           />
-                        <v-btn color="#00A99D" elevation="5" outlined x-large bold >Potrdite vaso kodo</v-btn>
+                        <router-link to="/vnospodatkov" tag="button" outlined><v-btn color="white" elevation="5" outlined x-large bold >Potrdite vaso kodo</v-btn></router-link>
                         </v-form>
                         <h4 class="text-left mt-4">Ponovno pošljemo potrditveno e-pošto? Ponovno poslji</h4>
                         <h4 class="text-left mt-6">Preverite ali je vas email naslov pravilen.</h4>

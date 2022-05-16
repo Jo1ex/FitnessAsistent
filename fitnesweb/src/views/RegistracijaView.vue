@@ -73,7 +73,7 @@
                         
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <router-link to="/verifikacija" tag="button" outlined>Registriraj se</router-link>
+                        <router-link to="/verifikacija" tag="button" outlined><v-btn color="white" elevation="5" outlined x-large bold >Registracija</v-btn></router-link>
                         
                       </div>
                     </v-col>

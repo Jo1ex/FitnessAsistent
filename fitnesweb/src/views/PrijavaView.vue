@@ -16,7 +16,7 @@
                         <h4 class="text-center mt-4">Vpisite svoj email za prijavo</h4>
                         <v-form>
                           <v-text-field
-                            label="Email naslov"
+                            label="E-mail naslov"
                             name="Email"
                             prepend-icon="mdi-account-outline"
                             type="text"
@@ -33,19 +33,34 @@
 
                           />
                         </v-form>
-                        <v-btn text x-small>Ali ste pozabili geslo?</v-btn>
                         
-                        <router-link to="/registracija">Registracija</router-link>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn color="#00A99D" elevation="5" outlined x-large bold >Prijavi se</v-btn>
+                        <router-link to="/" tag="button" outlined><v-btn color="white" elevation="5" outlined x-large bold >Prijavi se</v-btn></router-link>
                       </div>
                     </v-col>
                     
                 </v-window-item>
                 
               </v-window>
-            
+                        <v-spacer></v-spacer>
+                        <router-link to="/registracija" tag="button" class="mt-16 mr-5">
+                          <v-btn
+                            color="white"
+                            elevation="2"
+                            text
+                          >Registracija
+                          </v-btn>
+                        </router-link>
+                        <router-link to="/menjavagesla" tag="button" >
+                          <v-btn
+                            color="white"
+                            elevation="2"
+                            text
+                          >Ali ste pozabili geslo?
+                          </v-btn>
+                        </router-link>
+                        
           </v-col>
         </v-row>
       </v-container>

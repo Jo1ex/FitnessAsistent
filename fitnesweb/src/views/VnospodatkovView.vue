@@ -22,45 +22,28 @@
                                 <v-select
                                   :items="items"
                                   label="Spol*"
-                                  prepend-icon="mdi-account-outline"
+                                  prepend-inner-icon="mdi-account-outline"
                                 ></v-select>
                               
 
                             </v-row>
                         
+                        <v-form>
+                        <v-text-field
+                            label="Datim rojstva*"
+                            name="Datim rojstva"
+                            prepend-inner-icon="mdi-calendar"
+                            type="text"
+                            color="teal accent-2"
+                          />
                         
-                          <v-row justify="center">
-                            <v-date-picker v-model="picker">
-                              
-                            </v-date-picker>
-                          </v-row>
-
                           
-                        
-                        
-                          <div class="text-center mt-9">
-                            
-                             <v-menu
-                                transition="slide-y-transition"
-                                bottom
-                              >
-                            
-                                <v-list>
-                                  <v-list-item
-                                    v-for="(item, i) in items"
-                                    :key="i"
-                                  >
-                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                                  </v-list-item>
-                                </v-list>
-                              </v-menu>
-                            </div>
                           <v-form>
 
                           <v-text-field
                             label="Teza*"
                             name="Teza"
-                            prepend-icon="mdi-database"
+                            prepend-inner-icon="mdi-database"
                             type="text"
                             color="teal accent-2"
                           />
@@ -68,7 +51,7 @@
                           <v-text-field
                             label="Visina*"
                             name="Visina"
-                            prepend-icon="mdi-ruler"
+                            prepend-inner-icon="mdi-ruler"
                             type="text"
                             color="teal accent-2"
                           />
@@ -76,9 +59,10 @@
 
                           
                         </v-form>
+                        </v-form>
                       
                         
-                        <v-btn color="#00A99D" elevation="5" outlined x-large bold>Potrdi podatke</v-btn>
+                        <router-link to="/" tag="button" outlined><v-btn color="white" elevation="5" outlined x-large bold >Potrdite</v-btn></router-link>
                       </v-card-text>
                       
                     </v-col>
