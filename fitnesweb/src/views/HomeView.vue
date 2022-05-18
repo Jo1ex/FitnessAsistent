@@ -37,7 +37,7 @@
                         <v-btn text x-small>Registracija</v-btn>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn color="#00A99D" elevation="5" outlined x-large bold >Prijavi se</v-btn>
+                        <v-btn color="#00A99D" elevation="5" outlined x-large bold @click="login" >Prijavi se</v-btn>
                       </div>
                     </v-col>
                     
@@ -59,6 +59,14 @@ export default {
   }),
   props: {
     source: String
+  },
+  methods:{
+    login(){
+      this.$http.post("http://localhost:8000/api/users/login",{email:"patrik.pauman@sers.si",password:"test"
+      }).then(response=>{
+        console.log(response.data);
+      })
+    }
   }
 };
 </script>
